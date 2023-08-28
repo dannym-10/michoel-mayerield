@@ -1,0 +1,20 @@
+import { Navigation  } from "../types/Navigation";
+
+export const navigationData: Navigation[] = [
+    {
+        name: 'About Me',
+        link: 'about-me'
+    },
+    {
+        name: 'Services',
+        link: 'services'
+    },
+    {
+        name: 'Resources',
+        link: 'resources'
+    },
+    {
+        name: 'Work With Me',
+        link: 'work-with-me'
+    }
+]
