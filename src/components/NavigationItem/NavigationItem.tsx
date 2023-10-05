@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // import './Navigation.scss';
 
 interface NavigationItemProps {
@@ -9,8 +10,8 @@ interface NavigationItemProps {
 export const NavigationItem: React.FC<NavigationItemProps> = ({ name, link }) => {
 
     return (
-        <div>
-            This is the name {name}{link}
-        </div>
+        <Link to={link} style={{ background: 'red' }}>
+            This is the name {name}
+        </Link>
     );
 };

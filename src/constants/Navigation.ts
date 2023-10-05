@@ -16,5 +16,9 @@ export const navigationData: Navigation[] = [
     {
         name: 'Work With Me',
         link: 'work-with-me'
+    },
+    {
+        name: 'Not Found',
+        link: 'not-found'
     }
 ]
