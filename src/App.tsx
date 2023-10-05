@@ -9,20 +9,19 @@ import { Home } from './Pages/Home'
 import { NotFound } from './Pages/NotFound';
 import { navigationData } from './constants/Navigation'
 
-
 export const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="about-me" element={<AboutMe />} />
-          <Route path="services" element={<Services />} />
-          <Route path="resorces" element={<Resources />} />
-          <Route path="work-with-me" element={<WorkWithMe />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
         <Navigation />
+        <Routes>
+          <Route path={navigationData[0].link} index element={<Home />} />
+          <Route path={navigationData[1].link} element={<AboutMe />} />
+          <Route path={navigationData[2].link} element={<Services />} />
+          <Route path={navigationData[3].link} element={<Resources />} />
+          <Route path={navigationData[4].link} element={<WorkWithMe />} />
+          <Route path={navigationData[5].link} element={<NotFound />} />
+        </Routes>
       </BrowserRouter>
     </div>
   )

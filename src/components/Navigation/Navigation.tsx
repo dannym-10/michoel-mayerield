@@ -9,7 +9,7 @@ interface NavigationProps { }
 const Navigation: React.FC<NavigationProps> = () => {
   return (
     <>
-      {navigationData.map(item => <NavigationItem name={item.name} link={item.link} key={item.link} />)}
+      {navigationData.slice(0, -1).map(item => <NavigationItem name={item.name} link={item.link} key={item.link} />)}
     </>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import './Navigation.scss';
+import './NavigationItem.scss';
 
 interface NavigationItemProps {
     name: string;
@@ -10,8 +10,9 @@ interface NavigationItemProps {
 export const NavigationItem: React.FC<NavigationItemProps> = ({ name, link }) => {
 
     return (
-        <Link to={link} style={{ background: 'red' }}>
-            This is the name {name}
+        <Link to={link} className='navigation-item-wrapper'>
+            {name}
         </Link>
     );
 };
+

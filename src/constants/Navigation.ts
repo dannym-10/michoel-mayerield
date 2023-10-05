@@ -2,6 +2,10 @@ import { Navigation  } from "../types/Navigation";
 
 export const navigationData: Navigation[] = [
     {
+        name: 'Home',
+        link: '/'
+    },
+    {
         name: 'About Me',
         link: 'about-me'
     },
@@ -19,6 +23,6 @@ export const navigationData: Navigation[] = [
     },
     {
         name: 'Not Found',
-        link: 'not-found'
+        link: '*'
     }
 ]
