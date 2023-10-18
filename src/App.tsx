@@ -1,14 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AboutMe } from "./Pages/AboutMe";
-import { Services } from "./Pages/Services";
-import { Resources } from "./Pages/Resources";
-import { WorkWithMe } from "./Pages/WorkWithMe";
-import { Home } from "./Pages/Home";
-import { NotFound } from "./Pages/NotFound";
+import { AboutMe } from "./pages/AboutMe";
+import { Services } from "./pages/Services";
+import { Resources } from "./pages/Resources";
+import { WorkWithMe } from "./pages/WorkWithMe";
+import { Home } from "./pages/Home";
+import { NotFound } from "./pages/NotFound";
 import { navigationData } from "./constants/Navigation";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import "./App.css";
+import "./styles/index.scss";
+import { useEffect } from "react";
 
 export const App = () => {
   return (

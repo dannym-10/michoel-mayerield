@@ -1,4 +1,28 @@
+@import "../../styles/index.scss";
+
 .navigation-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @include tablet {
+    width: 80%;
+    background-color: orange;
+  }
+
+  @include desktop {
+    background-color: pink;
+    width: 80%;
+  }
+
   &__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
   }
 }

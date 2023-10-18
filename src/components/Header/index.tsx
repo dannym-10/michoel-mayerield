@@ -11,7 +11,9 @@ export const Header: React.FC<HeaderProps> = () => {
     <div className="header-wrapper">
       <div
         className="header-wrapper__burger"
-        onClick={() => setShowNavigation(!showNavigation)}
+        onClick={() =>
+          setShowNavigation((prevShowNavigation) => !prevShowNavigation)
+        }
       >
         <span className="header-wrapper__burger__line" />
         <span className="header-wrapper__burger__line" />

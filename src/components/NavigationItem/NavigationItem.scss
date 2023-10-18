@@ -1,3 +1,9 @@
+@import "../../styles/index.scss";
+
 .navigation-item-wrapper {
-    background-color: 'red';
+  padding: 10px 16px;
+
+  &__link {
+    font-size: 36px;
+  }
 }
