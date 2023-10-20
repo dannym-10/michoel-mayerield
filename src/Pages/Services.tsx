@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
+import { Spring } from "../components/Spring";
 
 interface ServicesProps {}
 
 export const Services: React.FC<ServicesProps> = () => {
-  
   return (
-    <div>
-      Services
-    </div>
+    <Spring>
+      <div>Services</div>
+    </Spring>
   );
 };

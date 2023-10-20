@@ -10,7 +10,6 @@ import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import "./App.css";
 import "./styles/index.scss";
-import { useEffect } from "react";
 
 export const App = () => {
   return (

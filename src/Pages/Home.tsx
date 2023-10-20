@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
+import { Spring } from "../components/Spring";
 
 interface HomeProps {}
 
 export const Home: React.FC<HomeProps> = () => {
-  
   return (
-    <div>
-        Home
-    </div>
+    <Spring>
+      <div>Home</div>
+    </Spring>
   );
 };

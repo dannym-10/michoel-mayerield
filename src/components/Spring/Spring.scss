@@ -1,0 +1,13 @@
+@import "../../styles//index.scss";
+
+.spring-wrapper {
+  padding: 0 $mobile-padding;
+
+  @include tablet {
+    padding: 0 $tablet-padding;
+  }
+
+  @include desktop {
+    padding: 0 $desktop-padding;
+  }
+}
