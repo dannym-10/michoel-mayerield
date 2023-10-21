@@ -17,24 +17,27 @@ export const Header: React.FC<HeaderProps> = () => {
   }, [location.pathname]);
 
   return (
-    <div className="header-wrapper">
-      {/* <Spring> */}
-      <>
-        <div
-          className="header-wrapper__burger"
-          onClick={() =>
-            setShowNavigation((prevShowNavigation) => !prevShowNavigation)
-          }
-        >
-          {}
-          <Hamburger />
+    <>
+      <Spring>
+        <div className="header-wrapper">
+          <>
+            <div
+              className="header-wrapper__burger"
+              onClick={() =>
+                setShowNavigation((prevShowNavigation) => !prevShowNavigation)
+              }
+            >
+              {}
+              <Hamburger />
+            </div>
+            <div className="header-wrapper__logo">
+              <img src="" alt="Michael Mayerfeld Logo" />
+            </div>
+          </>
+          {/* </Spring> */}
         </div>
-        <div className="header-wrapper__logo">
-          <img src="" alt="Michael Mayerfeld Logo" />
-        </div>
-      </>
-      {/* </Spring> */}
+      </Spring>
       {showNavigation && <Navigation />}
-    </div>
+    </>
   );
 };
