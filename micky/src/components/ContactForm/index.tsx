@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
-import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
-import { Spring } from "../components/Spring";
-interface WorkWithMeProps {}
+import { useForm } from "react-hook-form";
+import "./contact-form.scss";
+import { Button } from "../Button";
+
+interface ContactFormProps {}
 
 interface FormData {
   firstName: string;
@@ -13,7 +15,7 @@ interface FormData {
   methodOfContact: string; // best method to get in contact phone, text, email?
 }
 
-export const WorkWithMe: React.FC<WorkWithMeProps> = () => {
+export const ContactForm: React.FC<ContactFormProps> = () => {
   const form = useForm<FormData>();
   const { formState, control, register, handleSubmit, reset } = form;
   const { errors, isSubmitSuccessful } = formState;
@@ -27,31 +29,32 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = () => {
   }, [isSubmitSuccessful]);
 
   return (
-    <Spring>
-      <div>
-        <form onSubmit={handleSubmit(onSubmit)} noValidate>
-          <div>
+    <div className="contact-form-wrapper">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        noValidate
+        className="contact-form-wrapper__form"
+      >
+        <div className="contact-form-wrapper__form__inputs">
+          <div className="input-wrapper">
+            <label htmlFor="firstName">First Name</label>
             <input
               id="firstName"
-              placeholder="First Name"
               {...register("firstName", {
                 required: "First name is required",
               })}
             />
             <p>{errors.firstName?.message}</p>
           </div>
-          <div>
-            <input
-              id="lastName"
-              placeholder="Last Name"
-              {...register("lastName")}
-            />
+          <div className="input-wrapper">
+            <label htmlFor="lastName">Last Name</label>
+            <input id="lastName" {...register("lastName")} />
           </div>
-          <div>
+          <div className="input-wrapper">
+            <label htmlFor="email">Email Address</label>
             <input
               id="email"
               type="email"
-              placeholder="Email Address"
               {...register("email", {
                 pattern: {
                   value:
@@ -62,23 +65,24 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = () => {
             />
             <p>{errors.email?.message}</p>
           </div>
-          <div>
+          <div className="input-wrapper">
+            <label htmlFor="phone">Phone Number</label>
             <input
               id="phone"
               type="number"
-              placeholder="Phone Number"
               {...register("phone", {
                 required: "Phone number is required",
               })}
             />
             <p>{errors.phone?.message}</p>
           </div>
-          <div>
-            <button type="submit">Submit</button>
-          </div>
-        </form>
-        <DevTool control={control} />
-      </div>
-    </Spring>
+        </div>
+        {/* <div>
+          <button type="submit">Submit</button>
+        </div> */}
+        <Button text="hello" />
+      </form>
+      <DevTool control={control} />
+    </div>
   );
 };

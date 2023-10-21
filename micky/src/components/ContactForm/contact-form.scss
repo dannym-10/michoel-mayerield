@@ -1,0 +1,33 @@
+@import "../../styles//index.scss";
+
+.contact-form-wrapper {
+  &__form {
+    &__inputs {
+      display: flex;
+      flex-direction: column;
+
+      @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      @include desktop {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .input-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+          width: 50%;
+        }
+
+        @include desktop {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

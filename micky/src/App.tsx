@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AboutMe } from "./pages/AboutMe";
+import { AboutMe } from "./pages/AboutMe/index";
 import { Services } from "./pages/Services";
 import { Resources } from "./pages/Resources";
 import { WorkWithMe } from "./pages/WorkWithMe";
