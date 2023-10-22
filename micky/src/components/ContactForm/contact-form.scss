@@ -19,13 +19,22 @@
       .input-wrapper {
         display: flex;
         flex-direction: column;
+        box-sizing: border-box;
+        padding: 12px 0;
+        margin-bottom: 8px;
+
+        input {
+          padding: 10px;
+        }
 
         @include tablet {
           width: 50%;
+          margin-bottom: 12px;
         }
 
         @include desktop {
           width: 50%;
+          margin-bottom: 12px;
         }
       }
     }

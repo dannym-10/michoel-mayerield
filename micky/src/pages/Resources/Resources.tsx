@@ -1,5 +1,5 @@
 import React from "react";
-import { Spring } from "../components/Spring";
+import { Spring } from "../../components/Spring";
 
 interface ResourcesProps {}
 

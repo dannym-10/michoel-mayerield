@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AboutMe } from "./pages/AboutMe/index";
-import { Services } from "./pages/Services";
-import { Resources } from "./pages/Resources";
+import { Services } from "./pages/Services/Services";
+import { Resources } from "./pages/Resources/Resources";
 import { WorkWithMe } from "./pages/WorkWithMe";
-import { Home } from "./pages/Home";
-import { NotFound } from "./pages/NotFound";
+import { Home } from "./pages/Home/Home";
+import { NotFound } from "./pages/NotFound/NotFound";
 import { navigationData } from "./constants/Navigation";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
