@@ -31,9 +31,8 @@ export const Header: React.FC<HeaderProps> = () => {
             <img src="" alt="Michael Mayerfeld Logo" />
           </div>
         </>
-        {/* </Spring> */}
       </div>
-      {showNavigation && <Navigation />}
+      {showNavigation && <Navigation isOpen={showNavigation} />}
     </>
   );
 };

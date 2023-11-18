@@ -5,17 +5,17 @@
   height: 100%;
   background-color: red;
   position: absolute;
-  top: 0;
-  right: 0;
+  // top: 50%;
+  // right: 0;
 
   @include tablet {
-    width: 80%;
+    // width: 80%;
     background-color: orange;
   }
 
   @include desktop {
     background-color: pink;
-    width: 80%;
+    // width: 80%;
   }
 
   &__items {
