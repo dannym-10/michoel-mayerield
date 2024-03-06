@@ -1,0 +1,12 @@
+@import "../../styles//index.scss";
+
+.accordion-item {
+  &__container {
+    display: flex;
+    background-color: red;
+
+    &__title {
+      font-size: 1.75rem;
+    }
+  }
+}

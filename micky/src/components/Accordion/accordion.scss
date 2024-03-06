@@ -1,0 +1,11 @@
+@import "../../styles//index.scss";
+
+.accordion-wrapper {
+  .accordion__item {
+    background-color: aqua;
+
+    &__title {
+      padding: 1.25rem 1rem;
+    }
+  }
+}

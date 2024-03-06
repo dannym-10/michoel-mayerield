@@ -1,9 +1,11 @@
+@import "../../styles//index.scss";
+
 .header-wrapper {
   height: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  background: wheat;
+  background: blueviolet;
   justify-content: space-between;
 
   &__burger {
@@ -16,5 +18,13 @@
     height: 48px;
     width: 96px;
     background-color: red;
+  }
+
+  @include tablet {
+    background-color: lightgreen;
+  }
+
+  @include desktop {
+    background-color: chocolate;
   }
 }

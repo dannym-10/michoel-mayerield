@@ -1,0 +1,26 @@
+.about-me-wrapper {
+  display: flex;
+
+  &__image,
+  &__info {
+    flex: 1;
+    padding: 3rem;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__info {
+    // background-color: red;
+  }
+
+  &__image-container {
+    width: 300px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
