@@ -1,9 +1,24 @@
-//Global Breakpoints
+// Global Breakpoints
 $mobile-width: 680px;
 $tablet-width: 990px;
 $global-width: 1180px;
 
-//Global Padding
+// Global Padding
 $mobile-padding: 15px;
 $tablet-padding: 25px;
 $desktop-padding: 30px;
+
+// Spacing Scale
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 32px;
+$space-2xl: 48px;
+$space-3xl: 64px;
+$space-4xl: 96px;
+
+// Section Padding
+$section-padding-mobile: $space-2xl $mobile-padding;
+$section-padding-tablet: $space-3xl $tablet-padding;
+$section-padding-desktop: $space-4xl $desktop-padding;

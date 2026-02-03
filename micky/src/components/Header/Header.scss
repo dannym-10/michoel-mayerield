@@ -1,30 +1,83 @@
-@import "../../styles//index.scss";
+@import "../../styles/index.scss";
 
-.header-wrapper {
-  height: 80px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background: blueviolet;
-  justify-content: space-between;
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: $color-bg-cream;
+  @include smooth-transition(box-shadow);
 
-  &__burger {
-    height: 48px;
-    width: 48px;
-    z-index: 1;
+  &--scrolled {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 $mobile-padding;
+    max-width: $global-width;
+    margin: 0 auto;
+
+    @include tablet {
+      height: 80px;
+      padding: 0 $tablet-padding;
+    }
+
+    @include desktop {
+      height: 80px;
+      padding: 0 $desktop-padding;
+    }
   }
 
   &__logo {
-    height: 48px;
-    width: 96px;
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
   }
 
-  @include tablet {
-    background-color: lightgreen;
+  &__logo-name {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: $color-primary-dark;
+    letter-spacing: 0.02em;
+
+    @include tablet {
+      font-size: 1.25rem;
+    }
+
+    @include desktop {
+      font-size: 1.3rem;
+    }
   }
 
-  @include desktop {
-    background-color: chocolate;
+  &__logo-subtitle {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 0.7rem;
+    color: $color-text-light;
+    letter-spacing: 0.04em;
+
+    @include desktop {
+      font-size: 0.75rem;
+    }
+  }
+
+  &__nav-desktop {
+    display: none;
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &__burger {
+    z-index: 200;
+
+    @include desktop {
+      display: none;
+    }
   }
 }

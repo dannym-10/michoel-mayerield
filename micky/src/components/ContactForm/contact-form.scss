@@ -1,42 +1,111 @@
-@import "../../styles//index.scss";
+@import "../../styles/index.scss";
 
-.contact-form-wrapper {
+.contact-form {
+  @include card;
+  padding: $space-xl;
+  flex: 1;
+
+  @include desktop {
+    max-width: 520px;
+  }
+
+  &--success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+  }
+
+  &__success {
+    text-align: center;
+    color: $color-success;
+
+    svg {
+      margin-bottom: $space-md;
+    }
+
+    h3 {
+      margin-bottom: $space-sm;
+      color: $color-text-dark;
+    }
+
+    p {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+
   &__form {
-    &__inputs {
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+  }
 
-      @include tablet {
-        flex-direction: row;
-        flex-wrap: wrap;
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+    flex: 1;
+
+    label {
+      font-family: "Montserrat", Arial, sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: $color-text-dark;
+    }
+
+    input,
+    textarea {
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 0.95rem;
+      padding: 12px 16px;
+      border: 1px solid darken($color-bg-beige, 10%);
+      border-radius: 6px;
+      background-color: $color-bg-cream;
+      color: $color-text-dark;
+      @include smooth-transition(border-color);
+
+      &::placeholder {
+        color: $color-text-light;
       }
 
-      @include desktop {
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-
-      .input-wrapper {
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-        padding: 12px 0;
-        margin-bottom: 8px;
-
-        input {
-          padding: 10px;
-        }
-
-        @include tablet {
-          width: 50%;
-          margin-bottom: 12px;
-        }
-
-        @include desktop {
-          width: 50%;
-          margin-bottom: 12px;
-        }
+      &:focus {
+        outline: none;
+        border-color: $color-primary;
       }
     }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+  }
+
+  &__input--error {
+    border-color: $color-error !important;
+  }
+
+  &__required {
+    color: $color-error;
+  }
+
+  &__error {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 0.8rem;
+    color: $color-error;
+  }
+
+  &__submit {
+    margin-top: $space-sm;
   }
 }

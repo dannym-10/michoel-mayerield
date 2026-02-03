@@ -1,0 +1,85 @@
+@import "./styles/index.scss";
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url(./styles/fonts/Montserrat/Montserrat-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url(./styles/fonts/Montserrat/Montserrat-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url(./styles/fonts/Montserrat/Montserrat-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url(./styles/fonts/Montserrat/Montserrat-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url(./styles/fonts/Montserrat/Montserrat-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url(./styles/fonts/Montserrat/Montserrat-ExtraBold.ttf) format("truetype");
+  font-weight: 800;
+}
+
+body {
+  background-color: $color-bg-cream;
+  color: $color-text-dark;
+  font-family: "Montserrat", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  @include heading-1;
+}
+
+h2 {
+  @include heading-2;
+}
+
+h3 {
+  @include heading-3;
+}
+
+h4 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: $color-text-dark;
+}
+
+p {
+  @include body-text;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app__main {
+  flex: 1;
+}

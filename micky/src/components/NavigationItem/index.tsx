@@ -1,10 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./NavigationItem.scss";
 
 interface NavigationItemProps {
   name: string;
   link: string;
+  variant: "desktop" | "mobile";
 }
 
 export const NavigationItem: React.FC<NavigationItemProps> = ({
@@ -12,10 +13,13 @@ export const NavigationItem: React.FC<NavigationItemProps> = ({
   link,
 }) => {
   return (
-    <div className="navigation-item-wrapper">
-      <Link to={link} className="navigation-item-wrapper__link">
-        {name}
-      </Link>
-    </div>
+    <NavLink
+      to={link === "/" ? "/" : `/${link}`}
+      className={({ isActive }) =>
+        `nav-item ${isActive ? "nav-item--active" : ""}`
+      }
+    >
+      {name}
+    </NavLink>
   );
 };

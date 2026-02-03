@@ -4,14 +4,14 @@
   }
 }
 
-//Tablet Breakpoint
+// Tablet Breakpoint
 @mixin tablet {
   @media screen and (min-width: #{$mobile-width + 1}) and (max-width: #{$tablet-width}) {
     @content;
   }
 }
 
-//Desktop Breakpoint
+// Desktop Breakpoint
 @mixin desktop {
   @media screen and (min-width: #{$tablet-width + 1}) {
     @content;
@@ -31,5 +31,90 @@
   @include desktop {
     max-width: $global-width;
     padding: 0 $desktop-padding;
+  }
+}
+
+// Typography Mixins
+@mixin heading-1 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: $color-text-dark;
+
+  @include tablet {
+    font-size: 3rem;
+  }
+
+  @include desktop {
+    font-size: 3.5rem;
+  }
+}
+
+@mixin heading-2 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 1.3;
+  color: $color-text-dark;
+
+  @include tablet {
+    font-size: 2rem;
+  }
+
+  @include desktop {
+    font-size: 2.25rem;
+  }
+}
+
+@mixin heading-3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: $color-text-dark;
+
+  @include tablet {
+    font-size: 1.4rem;
+  }
+
+  @include desktop {
+    font-size: 1.5rem;
+  }
+}
+
+@mixin body-text {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: $color-text-medium;
+}
+
+// Utility Mixins
+@mixin section-padding {
+  padding: $section-padding-mobile;
+
+  @include tablet {
+    padding: $section-padding-tablet;
+  }
+
+  @include desktop {
+    padding: $section-padding-desktop;
+  }
+}
+
+@mixin smooth-transition($properties: all, $duration: 0.3s) {
+  transition: $properties $duration ease;
+}
+
+@mixin card {
+  background: $color-white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  @include smooth-transition(box-shadow);
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   }
 }

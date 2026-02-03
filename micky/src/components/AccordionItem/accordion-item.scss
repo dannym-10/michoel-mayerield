@@ -1,12 +1,56 @@
-@import "../../styles//index.scss";
+@import "../../styles/index.scss";
 
 .accordion-item {
-  &__container {
-    display: flex;
-    background-color: red;
+  @include card;
+  overflow: hidden;
+  border: 2px solid transparent;
+  @include smooth-transition(border-color);
 
-    &__title {
-      font-size: 1.75rem;
+  &--open {
+    border-color: $color-primary-light;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: "Montserrat", Arial, sans-serif;
+    @include smooth-transition(background-color);
+
+    &:hover {
+      background-color: rgba($color-primary-light, 0.08);
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: $color-text-dark;
+    text-align: left;
+  }
+
+  &__chevron {
+    color: $color-primary;
+    flex-shrink: 0;
+    margin-left: $space-md;
+    @include smooth-transition(transform);
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.7;
     }
   }
 }

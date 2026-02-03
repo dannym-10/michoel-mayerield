@@ -14,10 +14,6 @@ export const navigationData: Navigation[] = [
     link: "services",
   },
   {
-    name: "Resources",
-    link: "resources",
-  },
-  {
     name: "Work With Me",
     link: "work-with-me",
   },

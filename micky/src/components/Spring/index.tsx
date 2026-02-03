@@ -2,7 +2,7 @@ import React from "react";
 import "./Spring.scss";
 
 interface SpringProps {
-  children: JSX.Element;
+  children: React.ReactNode;
 }
 
 export const Spring: React.FC<SpringProps> = ({ children }) => (

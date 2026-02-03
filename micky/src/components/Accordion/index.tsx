@@ -3,20 +3,15 @@ import { homeAccordionData } from "../../constants/HomeAccordion";
 import "./accordion.scss";
 import { AccordionItem } from "../AccordionItem";
 
-interface AccordionProps {}
-
-export const Accordion: React.FC<AccordionProps> = () => {
+export const Accordion: React.FC = () => {
   const [openItem, setOpenItem] = useState<number | null>(null);
 
   const handleClick = (itemIndex: number) => {
-    if (itemIndex === openItem) {
-      setOpenItem(null);
-    }
-    setOpenItem(itemIndex);
+    setOpenItem(itemIndex === openItem ? null : itemIndex);
   };
 
   return (
-    <ul className="accordion-wrapper">
+    <ul className="accordion">
       {homeAccordionData.map((item, index) => (
         <AccordionItem
           item={item}

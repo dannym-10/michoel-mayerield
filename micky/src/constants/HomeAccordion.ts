@@ -2,28 +2,28 @@ import { AccordionData } from "../types/Navigation";
 
 export const homeAccordionData: AccordionData[] = [
   {
-    title: "Item 1",
+    title: "What happens in the first session?",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat enim eget enim pulvinar, eget mattis urna convallis.",
+      "The first session is an opportunity for us to get to know each other. We'll discuss what's brought you to counselling, what you'd like to achieve, and I'll explain how the process works. There's no pressure to share more than you're comfortable with.",
   },
   {
-    title: "Item 2",
+    title: "How long does therapy usually last?",
     description:
-      "Morbi vitae ligula blandit, imperdiet sapien sit amet, posuere ante. Proin iaculis quis neque ultricies sagittis.",
+      "The length of therapy varies from person to person. Some people find that a few sessions are enough, while others benefit from longer-term support. We'll regularly review your progress together and decide what works best for you.",
   },
   {
-    title: "Item 3",
+    title: "Is everything I say confidential?",
     description:
-      "Praesent ullamcorper luctus dolor, et mattis orci egestas id. Mauris viverra felis et vehicula tempus. Pellentesque pretium purus eget velit hendrerit mollis",
+      "Yes, confidentiality is a cornerstone of our work together. Everything discussed in sessions is kept strictly confidential. The only exceptions are if there is a risk of serious harm to you or someone else, which I would discuss with you first wherever possible.",
   },
   {
-    title: "Item 4",
+    title: "Do you work with parents and families?",
     description:
-      "Quisque varius venenatis massa at interdum. Fusce tristique ut lectus ut tincidunt. Proin cursus nibh sit",
+      "Absolutely. I understand that when a young person is struggling, it affects the whole family. I offer support to parents and carers and can involve them in the therapeutic process where appropriate and beneficial.",
   },
   {
-    title: "Item 5",
+    title: "Can sessions be online?",
     description:
-      "Morbi vitae ligula blandit, imperdiet sapien sit amet, posuere ante. Proin iaculis quis neque ultricies sagittis",
+      "Yes, I offer both face-to-face sessions at my practices in Hertfordshire and North West London, as well as online sessions via Zoom. This flexibility allows you to choose the format that works best for your circumstances.",
   },
 ];

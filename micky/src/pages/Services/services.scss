@@ -1,6 +1,6 @@
 @import "../../styles/index.scss";
 
-.about {
+.services {
   &__header {
     background-color: $color-primary-dark;
     padding: $space-3xl $mobile-padding;
@@ -27,99 +27,80 @@
     p {
       color: $color-primary-light;
       font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
   }
 
-  &__bio {
+  &__grid-section {
     @include section-padding;
   }
 
-  &__bio-inner {
+  &__grid-inner {
     max-width: $global-width;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: $space-xl;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-lg;
 
     @include tablet {
-      flex-direction: row;
-      align-items: flex-start;
-      gap: $space-2xl;
+      grid-template-columns: 1fr 1fr;
     }
 
     @include desktop {
-      flex-direction: row;
-      align-items: flex-start;
-      gap: $space-3xl;
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 
-  &__image-wrapper {
-    flex-shrink: 0;
+  &__card {
+    @include card;
+    padding: $space-xl;
+    @include smooth-transition(transform);
 
-    @include tablet {
-      width: 280px;
-    }
-
-    @include desktop {
-      width: 340px;
+    &:hover {
+      transform: translateY(-4px);
     }
   }
 
-  &__image {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-
-    @include tablet {
-      max-width: none;
-    }
+  &__card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin-bottom: $space-md;
   }
 
-  &__text {
-    flex: 1;
-
-    h2 {
-      margin-bottom: $space-lg;
-    }
-
-    p {
-      margin-bottom: $space-md;
-    }
+  &__card-title {
+    margin-bottom: $space-sm;
   }
 
-  &__qualifications {
+  &__card-desc {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  &__approach {
     @include section-padding;
     background-color: $color-bg-beige;
   }
 
-  &__qualifications-inner {
+  &__approach-inner {
     max-width: 720px;
     margin: 0 auto;
+    text-align: center;
 
     h2 {
-      text-align: center;
       margin-bottom: $space-xl;
     }
-  }
 
-  &__qual-list {
-    display: flex;
-    flex-direction: column;
-    gap: $space-md;
-
-    li {
-      padding: $space-md $space-lg;
-      padding-left: $space-lg;
-      border-left: 3px solid $color-primary;
-      background-color: $color-white;
-      border-radius: 0 6px 6px 0;
-      font-family: "Montserrat", Arial, sans-serif;
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: $color-text-medium;
+    p {
+      margin-bottom: $space-md;
+      text-align: left;
     }
   }
 

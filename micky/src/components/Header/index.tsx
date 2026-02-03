@@ -1,38 +1,62 @@
 import React, { useEffect, useState } from "react";
 import { Navigation } from "../Navigation";
 import { Squash as Hamburger } from "hamburger-react";
+import { Link, useLocation } from "react-router-dom";
 import "./Header.scss";
-import { useLocation } from "react-router-dom";
 
-interface HeaderProps {}
-
-export const Header: React.FC<HeaderProps> = () => {
+export const Header: React.FC = () => {
   const [showNavigation, setShowNavigation] = useState<boolean>(false);
+  const [scrolled, setScrolled] = useState<boolean>(false);
   const location = useLocation();
 
   useEffect(() => {
-    location.pathname && setShowNavigation(false);
+    setShowNavigation(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (showNavigation) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [showNavigation]);
 
   return (
     <>
-      <div className="header-wrapper">
-        <>
-          <div
-            className="header-wrapper__burger"
-            onClick={() =>
-              setShowNavigation((prevShowNavigation) => !prevShowNavigation)
-            }
-          >
-            {}
-            <Hamburger />
+      <header className={`header ${scrolled ? "header--scrolled" : ""}`}>
+        <div className="header__inner">
+          <Link to="/" className="header__logo">
+            <span className="header__logo-name">Michoel Mayerfeld</span>
+            <span className="header__logo-subtitle">Counsellor & Psychotherapist</span>
+          </Link>
+          <nav className="header__nav-desktop">
+            <Navigation variant="desktop" />
+          </nav>
+          <div className="header__burger">
+            <Hamburger
+              toggled={showNavigation}
+              toggle={setShowNavigation}
+              size={24}
+              color={scrolled ? "#3A3530" : "#3A3530"}
+              rounded
+            />
           </div>
-          <div className="header-wrapper__logo">
-            <img src="" alt="Michael Mayerfeld Logo" />
-          </div>
-        </>
-      </div>
-      {showNavigation && <Navigation isOpen={showNavigation} />}
+        </div>
+      </header>
+      {showNavigation && (
+        <Navigation variant="mobile" isOpen={showNavigation} />
+      )}
     </>
   );
 };

@@ -1,17 +1,92 @@
 @import "../../styles/index.scss";
 
-.work-with-me-wrapper {
-  @include springContainer;
+.work-with-me {
+  &__header {
+    background-color: $color-primary-dark;
+    padding: $space-3xl $mobile-padding;
+    text-align: center;
 
-  &__main {
-    &__title {
-      font-size: 2.4rem;
-      padding: 18px 0;
+    @include tablet {
+      padding: $space-4xl $tablet-padding;
     }
-    &__services-text {
-      font-size: 1.2rem;
-      padding-bottom: 18px;
-      max-width: 800px;
+
+    @include desktop {
+      padding: $space-4xl $desktop-padding;
+    }
+  }
+
+  &__header-inner {
+    max-width: $global-width;
+    margin: 0 auto;
+
+    h1 {
+      color: $color-white;
+      margin-bottom: $space-md;
+    }
+
+    p {
+      color: $color-primary-light;
+      font-size: 1.1rem;
+    }
+  }
+
+  &__content {
+    @include section-padding;
+  }
+
+  &__content-inner {
+    max-width: $global-width;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: $space-2xl;
+
+    @include desktop {
+      flex-direction: row;
+      gap: $space-3xl;
+    }
+  }
+
+  &__info {
+    flex: 1;
+
+    h2 {
+      margin-bottom: $space-lg;
+    }
+
+    p {
+      margin-bottom: $space-md;
+    }
+  }
+
+  &__contact-box {
+    margin-top: $space-xl;
+    padding: $space-lg;
+    background-color: $color-bg-beige;
+    border-radius: 8px;
+    border-left: 4px solid $color-primary;
+
+    h3 {
+      margin-bottom: $space-md;
+    }
+  }
+
+  &__contact-item {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    margin-bottom: $space-sm;
+    color: $color-primary;
+
+    a {
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 0.95rem;
+      color: $color-text-dark;
+      @include smooth-transition(color);
+
+      &:hover {
+        color: $color-primary;
+      }
     }
   }
 }
