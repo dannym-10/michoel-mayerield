@@ -54,6 +54,8 @@ export const Footer: React.FC = () => {
               <a
                 className="footer__logo"
                 href="https://www.bacp.co.uk/therapists/403028/michael-mayerfeld/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={bacpLogo} alt="BACP logo" />
               </a>
