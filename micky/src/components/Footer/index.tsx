@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
       <div className="footer__inner">
         <div className="footer__grid">
           <div className="footer__col">
-            <h3 className="footer__brand">Michoel Mayerfeld</h3>
+            <h3 className="footer__brand">Michael Mayerfeld</h3>
             <p className="footer__tagline">
               Counsellor & Addiction Psychotherapist
             </p>
@@ -69,7 +69,7 @@ export const Footer: React.FC = () => {
 
       <div className="footer__copyright">
         <p>
-          &copy; {new Date().getFullYear()} Michoel Mayerfeld. All rights
+          &copy; {new Date().getFullYear()} Michael Mayerfeld. All rights
           reserved.
         </p>
       </div>

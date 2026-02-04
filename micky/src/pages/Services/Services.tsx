@@ -4,21 +4,7 @@ import { Button } from "../../components/Button";
 import { FadeInSection } from "../../components/FadeInSection";
 import "./services.scss";
 
-const iconColors = [
-  "#5B7B5E",
-  "#C2A97E",
-  "#A68B5B",
-  "#8FA98F",
-  "#3D5A40",
-  "#D4C5A0",
-  "#5B7B5E",
-  "#C2A97E",
-  "#A68B5B",
-  "#8FA98F",
-  "#3D5A40",
-  "#D4C5A0",
-  "#5B7B5E",
-];
+const ICON_COLORS = ["#5B7B5E", "#C2A97E", "#A68B5B", "#8FA98F", "#3D5A40"];
 
 export const Services: React.FC = () => {
   return (
@@ -45,14 +31,14 @@ export const Services: React.FC = () => {
                 <div className="services__card">
                   <div
                     className="services__card-icon"
-                    style={{ backgroundColor: `${iconColors[index]}18` }}
+                    style={{ backgroundColor: `${ICON_COLORS[index % ICON_COLORS.length]}18` }}
                   >
                     <svg
                       width="28"
                       height="28"
                       viewBox="0 0 24 24"
                       fill="none"
-                      stroke={iconColors[index]}
+                      stroke={ICON_COLORS[index % ICON_COLORS.length]}
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -77,10 +63,12 @@ export const Services: React.FC = () => {
           </FadeInSection>
           <FadeInSection delay={150}>
             <p>
-              I work in an integrative way, drawing on different therapeutic
-              approaches to meet each individual's needs. My practice is built on
-              creating a safe, non-judgemental space where young people can
-              explore their feelings and develop healthier ways of coping.
+              I work integratively, drawing on CBT, DBT, motivational
+              interviewing, person-centred therapy, psychodynamic therapy, schema
+              therapy, and systemic therapy to meet each individual's needs. My
+              practice is built on creating a safe, non-judgemental space where
+              young people can explore their feelings and develop healthier ways
+              of coping.
             </p>
             <p>
               Whether working with substance misuse, behavioural addictions, or
@@ -97,8 +85,8 @@ export const Services: React.FC = () => {
           <FadeInSection>
             <h2>Ready to Get Started?</h2>
             <p>
-              Take the first step towards support. I offer a free 20-minute
-              consultation to discuss your needs.
+              Book a free 15-minute phone or WhatsApp video chat — a quick,
+              no-pressure conversation to see if we're a good fit.
             </p>
             <Button text="Work With Me" to="/work-with-me" />
           </FadeInSection>

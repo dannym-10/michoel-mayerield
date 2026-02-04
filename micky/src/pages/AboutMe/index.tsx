@@ -13,7 +13,7 @@ export const AboutMe: React.FC = () => {
             <h1>About Me</h1>
           </FadeInSection>
           <FadeInSection delay={150}>
-            <p>Get to know a little more about who I am and how I work.</p>
+            <p>Counsellor and Addiction Psychotherapist for young people and families.</p>
           </FadeInSection>
         </div>
       </section>
@@ -24,7 +24,7 @@ export const AboutMe: React.FC = () => {
             <div className="about__image-wrapper">
               <img
                 src={mickyPortrait}
-                alt="Michoel Mayerfeld - Counsellor and Psychotherapist"
+                alt="Michael Mayerfeld - Counsellor and Psychotherapist"
                 className="about__image"
               />
             </div>
@@ -33,18 +33,31 @@ export const AboutMe: React.FC = () => {
             <div className="about__text">
               <h2>My Story</h2>
               <p>
-                As a Counsellor and Addiction Psychotherapist, I support children,
-                young people and young adults with addictive behaviours and other
-                mental health issues including anxiety, depression, exam stress,
-                and loneliness.
+                I'm an expert in adolescent stress and addiction recovery with an
+                MSc in Addiction Psychology and Counselling, a decade of
+                experience as a youth worker, and clinical roles in schools and
+                an adolescent therapy charity. I can help with anxiety, low
+                self-esteem, exam stress, substance use, behavioural addictions,
+                or simply when life feels a little bit off.
               </p>
               <p>
-                If this is for you or for your loved one, feel free to get in
-                touch and we can set up our first appointment.
+                I have specialist training in supporting young people in the
+                field of addiction. I can help with drug and alcohol use, whether
+                you are experimenting or if it feels more complex. I also help
+                young people affected by other people's addiction, and I
+                recognise the bravery of parents reaching out when they think
+                their use may be impacting their children.
               </p>
               <p>
-                I offer face to face counselling in my private practice
-                (Hertfordshire and North West London) as well as sessions via Zoom.
+                I offer face-to-face counselling in Hertfordshire (Borehamwood)
+                and North-West London (Maida Vale), as well as sessions via
+                Zoom.
+              </p>
+              <p>
+                I always have a warm and non-judgemental approach. My scope
+                extends to neurodivergent young people, and I am dedicated to
+                providing a safe and inclusive counselling space for LGBTQ+
+                clients.
               </p>
             </div>
           </FadeInSection>
@@ -63,7 +76,7 @@ export const AboutMe: React.FC = () => {
                 Professionals
               </li>
               <li>
-                Post Graduate Diploma in Addiction Psychology and Counselling
+                MSc in Addiction Psychology and Counselling
               </li>
               <li>Qualified Youth Worker</li>
               <li>
@@ -84,8 +97,8 @@ export const AboutMe: React.FC = () => {
           <FadeInSection>
             <h2>Interested in Working Together?</h2>
             <p>
-              I offer a free 20-minute telephone consultation to help us understand
-              each other before committing to anything.
+              Book a free 15-minute phone or WhatsApp video chat — a quick,
+              no-pressure conversation to see if we're a good fit.
             </p>
             <Button text="Get in Touch" to="/work-with-me" />
           </FadeInSection>

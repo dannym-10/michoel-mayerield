@@ -1,6 +1,6 @@
 @import "../../styles/index.scss";
 
-.services {
+.resources {
   &__header {
     background-color: $color-primary-dark;
     padding: 56px 30px;
@@ -24,13 +24,21 @@
     }
   }
 
-  &__grid-section {
+  &__section {
     @include section-padding;
+
+    &--alt {
+      background-color: $color-bg-beige;
+    }
   }
 
-  &__grid-inner {
+  &__section-inner {
     max-width: $global-width;
     margin: 0 auto;
+
+    h2 {
+      margin-bottom: $space-xl;
+    }
   }
 
   &__grid {
@@ -41,59 +49,60 @@
     @include tablet {
       grid-template-columns: 1fr 1fr;
     }
-
-    @include desktop {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
   }
 
   &__card {
     @include card;
     padding: $space-xl;
-    @include smooth-transition(transform);
     height: 100%;
 
-    &:hover {
-      transform: translateY(-4px);
-    }
-  }
-
-  &__card-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    margin-bottom: $space-md;
-  }
-
-  &__card-title {
-    margin-bottom: $space-sm;
-  }
-
-  &__card-desc {
-    font-size: 0.9rem;
-    line-height: 1.7;
-  }
-
-  &__approach {
-    @include section-padding;
-    background-color: $color-bg-beige;
-  }
-
-  &__approach-inner {
-    max-width: 720px;
-    margin: 0 auto;
-    text-align: center;
-
-    h2 {
-      margin-bottom: $space-xl;
+    h3 {
+      margin-bottom: $space-sm;
     }
 
     p {
-      margin-bottom: $space-md;
-      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: $space-sm;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-sm;
+    margin-top: $space-md;
+  }
+
+  &__tag {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: rgba($color-primary, 0.1);
+    color: $color-primary-dark;
+    border-radius: 20px;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 0.85rem;
+  }
+
+  &__info-list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+
+    li {
+      padding: $space-md $space-lg;
+      padding-left: $space-lg;
+      border-left: 3px solid $color-primary;
+      background-color: $color-white;
+      border-radius: 0 6px 6px 0;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: $color-text-medium;
     }
   }
 

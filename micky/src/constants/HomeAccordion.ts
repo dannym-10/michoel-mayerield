@@ -19,11 +19,11 @@ export const homeAccordionData: AccordionData[] = [
   {
     title: "Do you work with parents and families?",
     description:
-      "Absolutely. I understand that when a young person is struggling, it affects the whole family. I offer support to parents and carers and can involve them in the therapeutic process where appropriate and beneficial.",
+      "Absolutely. I understand that when a young person is struggling, it affects the whole family. I collaborate with families and actively involve parents and caregivers. Parents and carers are welcome to join the first session if this would be helpful.",
   },
   {
     title: "Can sessions be online?",
     description:
-      "Yes, I offer both face-to-face sessions at my practices in Hertfordshire and North West London, as well as online sessions via Zoom. This flexibility allows you to choose the format that works best for your circumstances.",
+      "Yes, I offer face-to-face sessions in Hertfordshire (Borehamwood) and North-West London (Maida Vale), as well as online sessions via Zoom. This flexibility allows you to choose the format that works best for your circumstances.",
   },
 ];

@@ -3,16 +3,8 @@
 .work-with-me {
   &__header {
     background-color: $color-primary-dark;
-    padding: $space-3xl $mobile-padding;
+    padding: 56px 30px;
     text-align: center;
-
-    @include tablet {
-      padding: $space-4xl $tablet-padding;
-    }
-
-    @include desktop {
-      padding: $space-4xl $desktop-padding;
-    }
   }
 
   &__header-inner {

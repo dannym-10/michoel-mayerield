@@ -37,7 +37,7 @@ export const Header: React.FC = () => {
       <header className={`header ${scrolled ? "header--scrolled" : ""}`}>
         <div className="header__inner">
           <Link to="/" className="header__logo">
-            <span className="header__logo-name">Michoel Mayerfeld</span>
+            <span className="header__logo-name">Michael Mayerfeld</span>
             <span className="header__logo-subtitle">Counsellor & Psychotherapist</span>
           </Link>
           <nav className="header__nav-desktop">
