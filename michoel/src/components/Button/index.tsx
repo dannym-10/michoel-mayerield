@@ -8,6 +8,7 @@ interface ButtonProps {
   type?: "button" | "submit";
   fullWidth?: boolean;
   to?: string;
+  href?: string;
   onPress?: () => void;
 }
 
@@ -17,9 +18,18 @@ export const Button: React.FC<ButtonProps> = ({
   type = "button",
   fullWidth = false,
   to,
+  href,
   onPress,
 }) => {
   const className = `btn btn--${variant}${fullWidth ? " btn--full" : ""}`;
+
+  if (href) {
+    return (
+      <a href={href} className={className} target="_blank" rel="noopener noreferrer">
+        {text}
+      </a>
+    );
+  }
 
   if (to) {
     return (

@@ -46,7 +46,18 @@
   }
 
   &__content {
+    display: grid;
     overflow: hidden;
+
+    &-inner {
+      overflow: hidden;
+      padding: 0 24px 0;
+      transition: padding 0.2s ease;
+
+      &--open {
+        padding: 0 24px 20px;
+      }
+    }
 
     p {
       font-size: 0.95rem;

@@ -17,9 +17,8 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
   index,
 }) => {
   const contentSpring = useSpring({
-    maxHeight: isVisible ? 300 : 0,
+    gridTemplateRows: isVisible ? "1fr" : "0fr",
     opacity: isVisible ? 1 : 0,
-    padding: isVisible ? "0 24px 20px" : "0 24px 0",
     config: { tension: 250, friction: 28 },
   });
 
@@ -48,7 +47,9 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
         </svg>
       </button>
       <animated.div style={contentSpring} className="accordion-item__content">
-        <p>{item.description}</p>
+        <div className={`accordion-item__content-inner ${isVisible ? "accordion-item__content-inner--open" : ""}`}>
+          <p>{item.description}</p>
+        </div>
       </animated.div>
     </li>
   );

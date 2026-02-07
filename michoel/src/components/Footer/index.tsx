@@ -59,11 +59,18 @@ export const Footer: React.FC = () => {
               >
                 <img src={bacpLogo} alt="BACP logo" />
               </a>
-              <img
-                src={apLogo}
-                alt="Addiction Professionals logo"
+              <a
                 className="footer__logo"
-              />
+                href="https://addictionprofessionals.org.uk/directory/practitioner-directory/2468"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={apLogo}
+                  alt="Addiction Professionals logo"
+                  className="footer__logo"
+                />
+              </a>
             </div>
           </div>
         </div>
