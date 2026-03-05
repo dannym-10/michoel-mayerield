@@ -1,6 +1,6 @@
 @import "../../styles/index.scss";
 
-.work-with-me {
+.next-steps {
   &__header {
     background-color: $color-primary-dark;
     padding: 56px 30px;
@@ -87,7 +87,7 @@
       border-color: $color-primary;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 
-      .work-with-me__booking-card-arrow {
+      .next-steps__booking-card-arrow {
         transform: translateX(4px);
       }
     }

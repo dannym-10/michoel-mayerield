@@ -1,13 +1,13 @@
 import React from "react";
 import { FadeInSection } from "../../components/FadeInSection";
 import { ContactForm } from "../../components/ContactForm";
-import "./work-with-me.scss";
+import "./next-steps.scss";
 
-export const WorkWithMe: React.FC = () => {
+export const NextSteps: React.FC = () => {
   return (
-    <div className="work-with-me">
-      <section className="work-with-me__header">
-        <div className="work-with-me__header-inner">
+    <div className="next-steps">
+      <section className="next-steps__header">
+        <div className="next-steps__header-inner">
           <FadeInSection>
             <h1>Next steps</h1>
           </FadeInSection>
@@ -19,10 +19,10 @@ export const WorkWithMe: React.FC = () => {
         </div>
       </section>
 
-      <section className="work-with-me__content">
-        <div className="work-with-me__content-inner">
+      <section className="next-steps__content">
+        <div className="next-steps__content-inner">
           <FadeInSection direction="left">
-            <div className="work-with-me__info">
+            <div className="next-steps__info">
               <h2>Get in Touch</h2>
               <p>
                 If you decide you would like to go ahead with counselling then
@@ -46,15 +46,15 @@ export const WorkWithMe: React.FC = () => {
                 There is no obligation to continue.
               </p>
 
-              <div className="work-with-me__contact-box">
+              <div className="next-steps__contact-box">
                 <h3>Schedule Free Consultation</h3>
                 <a
                   href="https://secure.counselling-directory.org.uk/introductory-call/96034/select-slot"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="work-with-me__booking-card"
+                  className="next-steps__booking-card"
                 >
-                  <div className="work-with-me__booking-card-icon">
+                  <div className="next-steps__booking-card-icon">
                     <svg
                       width="24"
                       height="24"
@@ -71,12 +71,12 @@ export const WorkWithMe: React.FC = () => {
                       <line x1="3" y1="10" x2="21" y2="10" />
                     </svg>
                   </div>
-                  <div className="work-with-me__booking-card-text">
-                    <span className="work-with-me__booking-card-title">Book a free intro call</span>
-                    <span className="work-with-me__booking-card-sub">Choose a time that suits you via the Counselling Directory</span>
+                  <div className="next-steps__booking-card-text">
+                    <span className="next-steps__booking-card-title">Book a free intro call</span>
+                    <span className="next-steps__booking-card-sub">Choose a time that suits you via the Counselling Directory</span>
                   </div>
                   <svg
-                    className="work-with-me__booking-card-arrow"
+                    className="next-steps__booking-card-arrow"
                     width="20"
                     height="20"
                     viewBox="0 0 24 24"

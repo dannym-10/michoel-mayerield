@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AboutMe } from "./pages/AboutMe/index";
-import { Services } from "./pages/Services/Services";
-import { WorkWithMe } from "./pages/WorkWithMe";
+import { WhereWeCanMeet } from "./pages/WhereWeCanMeet";
+import { NextSteps } from "./pages/NextSteps";
 import { Home } from "./pages/Home/Home";
 import { NotFound } from "./pages/NotFound/NotFound";
 import { navigationData } from "./constants/Navigation";
@@ -20,8 +20,8 @@ export const App = () => {
           <Routes>
             <Route path={navigationData[0].link} index element={<Home />} />
             <Route path={navigationData[1].link} element={<AboutMe />} />
-            <Route path={navigationData[2].link} element={<Services />} />
-            <Route path={navigationData[3].link} element={<WorkWithMe />} />
+            <Route path={navigationData[2].link} element={<WhereWeCanMeet />} />
+            <Route path={navigationData[3].link} element={<NextSteps />} />
             <Route path={navigationData[4].link} element={<NotFound />} />
           </Routes>
         </main>

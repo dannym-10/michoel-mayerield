@@ -1,16 +1,16 @@
 import React from "react";
-import { servicesData } from "../../constants/Services";
+import { whereWeCanMeetData } from "../../constants/WhereWeCanMeet";
 import { Button } from "../../components/Button";
 import { FadeInSection } from "../../components/FadeInSection";
-import "./services.scss";
+import "./where-we-can-meet.scss";
 
 const ICON_COLORS = ["#5B7B5E", "#C2A97E", "#A68B5B", "#8FA98F", "#3D5A40"];
 
-export const Services: React.FC = () => {
+export const WhereWeCanMeet: React.FC = () => {
   return (
-    <div className="services">
-      <section className="services__header">
-        <div className="services__header-inner">
+    <div className="where-we-can-meet">
+      <section className="where-we-can-meet__header">
+        <div className="where-we-can-meet__header-inner">
           <FadeInSection>
             <h1>Where we can meet</h1>
           </FadeInSection>
@@ -23,14 +23,14 @@ export const Services: React.FC = () => {
         </div>
       </section>
 
-      <section className="services__grid-section">
-        <div className="services__grid-inner">
-          <div className="services__grid">
-            {servicesData.map((service, index) => (
-              <FadeInSection key={service.title} delay={index * 80}>
-                <div className="services__card">
+      <section className="where-we-can-meet__grid-section">
+        <div className="where-we-can-meet__grid-inner">
+          <div className="where-we-can-meet__grid">
+            {whereWeCanMeetData.map((item, index) => (
+              <FadeInSection key={item.title} delay={index * 80}>
+                <div className="where-we-can-meet__card">
                   <div
-                    className="services__card-icon"
+                    className="where-we-can-meet__card-icon"
                     style={{
                       backgroundColor: `${ICON_COLORS[index % ICON_COLORS.length]}18`,
                     }}
@@ -49,8 +49,8 @@ export const Services: React.FC = () => {
                       <path d="M12 8v8M8 12h8" />
                     </svg>
                   </div>
-                  <h3 className="services__card-title">{service.title}</h3>
-                  <p className="services__card-desc">{service.description}</p>
+                  <h3 className="where-we-can-meet__card-title">{item.title}</h3>
+                  <p className="where-we-can-meet__card-desc">{item.description}</p>
                 </div>
               </FadeInSection>
             ))}
@@ -58,8 +58,8 @@ export const Services: React.FC = () => {
         </div>
       </section>
 
-      <section className="services__approach">
-        <div className="services__approach-inner">
+      <section className="where-we-can-meet__approach">
+        <div className="where-we-can-meet__approach-inner">
           <FadeInSection>
             <h2>My Approach</h2>
           </FadeInSection>
@@ -82,8 +82,8 @@ export const Services: React.FC = () => {
         </div>
       </section>
 
-      <section className="services__cta">
-        <div className="services__cta-inner">
+      <section className="where-we-can-meet__cta">
+        <div className="where-we-can-meet__cta-inner">
           <FadeInSection>
             <h2>Ready to Get Started?</h2>
             <p>

@@ -1,10 +1,10 @@
-export interface ServiceItem {
+export interface WhereWeCanMeetItem {
   title: string;
   description: string;
   icon: string;
 }
 
-export const servicesData: ServiceItem[] = [
+export const whereWeCanMeetData: WhereWeCanMeetItem[] = [
   {
     title: "London Maida Vale",
     description:
