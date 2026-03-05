@@ -18,14 +18,19 @@ export const Home: React.FC = () => {
             <p className="home__hero-subtitle">
               If your child is overwhelmed, misunderstood, or struggling, you
               don't have to wait months for CAMHS. I offer professional
-              counselling and addiction psychotherapy for children, young people,
-              and young adults in Hertfordshire, North-West London and online.
+              counselling and addiction psychotherapy for children, young
+              people, and young adults in Hertfordshire, North-West London and
+              online.
             </p>
           </FadeInSection>
           <FadeInSection delay={300}>
             <div className="home__hero-cta">
-              <Button text="Get in Touch" to="/work-with-me" />
-              <Button text="Learn More" variant="outline" to="/about-me" />
+              <Button text="Get in Touch" to="/next-steps" />
+              <Button
+                text="Schedule Free Consultation"
+                variant="outline"
+                href="https://secure.counselling-directory.org.uk/introductory-call/96034/select-slot"
+              />
             </div>
           </FadeInSection>
         </div>
@@ -40,64 +45,114 @@ export const Home: React.FC = () => {
             <FadeInSection delay={100}>
               <div className="home__feature-card">
                 <div className="home__feature-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
                     <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
                   </svg>
                 </div>
-                <h3>Young People</h3>
+                <h3>Psychotherapy</h3>
                 <p>
-                  If school feels overwhelming or life feels harder than it
-                  should, I can help ease the pressure, improve focus, build
-                  genuine friendships, and strengthen confidence.
+                  At Michael Mayerfeld Psychotherapy, I offer gentle,
+                  compassionate psychotherapy for adults and young people facing
+                  a range of emotional and mental health challenges. You may be
+                  struggling with anxiety, depression, low self-esteem, trauma,
+                  grief, relationship difficulties, identity questions, or
+                  simply feeling overwhelmed. Whatever brings you to therapy, I
+                  provide a calm, non-judgemental space where you can speak
+                  openly and feel truly heard. My approach is collaborative and
+                  tailored to you. We move at a pace that feels safe, exploring
+                  patterns and experiences with care and curiosity. Drawing on
+                  evidence-based approaches including CBT, psychodynamic
+                  understanding, and emotional regulation strategies, I adapt
+                  therapy to your individual needs. Above all, I aim to support
+                  you in building insight, resilience, and self-understanding,
+                  helping you move toward meaningful and lasting change with
+                  warmth, respect, and kindness.
                 </p>
               </div>
             </FadeInSection>
             <FadeInSection delay={200}>
               <div className="home__feature-card">
                 <div className="home__feature-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
                   </svg>
                 </div>
-                <h3>Mental Health</h3>
+                <h3>Therapy for Adolescence</h3>
                 <p>
-                  Support for anxiety, depression, self-harm, exam stress, and
-                  other emotional challenges young people face in today's world.
+                  Adolescence can feel overwhelming—for teens and for parents.
+                  As a licensed therapist specializing in adolescent therapy, I
+                  provide a supportive, nonjudgmental space where teens can talk
+                  openly about anxiety, depression, friendships, identity,
+                  school stress, family conflict, and life transitions. My
+                  approach is warm, collaborative, and tailored to each young
+                  person's needs. I blend evidence-based techniques like
+                  cognitive behavioral therapy (CBT), emotional regulation
+                  skills, and mindfulness with genuine connection and humor to
+                  help teens feel understood and empowered. Together, we build
+                  coping tools, strengthen communication, and develop resilience
+                  that extends beyond the therapy room. I also partner with
+                  parents when appropriate, offering guidance and feedback to
+                  support progress at home. My goal is to help adolescents grow
+                  in confidence, self-awareness, and emotional strength so they
+                  can navigate challenges and move forward with clarity,
+                  balance, and hope.
                 </p>
               </div>
             </FadeInSection>
             <FadeInSection delay={300}>
               <div className="home__feature-card">
                 <div className="home__feature-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <path d="M12 22c4-4 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 4 8 8 12z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
                 </div>
                 <h3>Addiction</h3>
                 <p>
-                  Whether it's substances, gaming, gambling, or other compulsive
-                  behaviours, I offer a kind and caring space to talk and find a
-                  way forward.
-                </p>
-              </div>
-            </FadeInSection>
-            <FadeInSection delay={400}>
-              <div className="home__feature-card">
-                <div className="home__feature-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                  </svg>
-                </div>
-                <h3>Family Support</h3>
-                <p>
-                  Helping parents and families find calmer family life, fewer
-                  crises, clearer steps to support your child, and renewed hope
-                  for the future.
+                  At Michael Mayerfeld Psychotherapy, I provide specialist
+                  addiction psychotherapy for a wide range of behavioural and
+                  substance-related difficulties. Addiction can take many
+                  forms—alcohol or drug misuse, gambling, gaming, pornography,
+                  sex, shopping, social media, or compulsive relationship
+                  patterns—and often develops as a way of coping with distress,
+                  trauma, anxiety, or low self-worth. Together, we explore not
+                  just the behaviour itself, but the underlying emotional
+                  drivers that keep the cycle going. With an MSc in Addiction
+                  Psychology & Counselling and membership with Addiction
+                  Professionals (ADAP), I use evidence-based approaches
+                  including CBT, motivational interviewing, relapse prevention,
+                  and emotional regulation strategies. Therapy is collaborative,
+                  compassionate, and paced to suit you. My aim is to help you
+                  regain control, strengthen resilience, and build healthier
+                  ways of meeting your needs for the long term.
                 </p>
               </div>
             </FadeInSection>
@@ -129,7 +184,7 @@ export const Home: React.FC = () => {
             </p>
           </FadeInSection>
           <FadeInSection delay={300}>
-            <Button text="Work With Me" variant="primary" to="/work-with-me" />
+            <Button text="Next Steps" variant="primary" to="/next-steps" />
           </FadeInSection>
         </div>
       </section>

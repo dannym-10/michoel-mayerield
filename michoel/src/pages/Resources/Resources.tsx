@@ -155,7 +155,7 @@ export const Resources: React.FC = () => {
               Book a free 15-minute phone or WhatsApp video chat — a quick,
               no-pressure conversation to see if we're a good fit.
             </p>
-            <Button text="Work With Me" to="/work-with-me" />
+            <Button text="Next Steps" to="/next-steps" />
           </FadeInSection>
         </div>
       </section>

@@ -39,19 +39,16 @@
     gap: $space-sm;
   }
 
-  &__brand {
-    font-size: 1.25rem;
-    color: $color-white;
-  }
-
   &__tagline {
     color: $color-primary-light;
     font-size: 0.9rem;
+    margin: 0;
   }
 
   &__location {
     color: $color-primary-light;
     font-size: 0.85rem;
+    margin: 0;
   }
 
   &__col-title {

@@ -36,6 +36,14 @@
     @include desktop {
       flex-direction: row;
       gap: $space-3xl;
+
+      > .fade-in-section:first-child {
+        flex: 3;
+      }
+
+      > .fade-in-section:last-child {
+        flex: 2;
+      }
     }
   }
 
@@ -61,6 +69,66 @@
     h3 {
       margin-bottom: $space-md;
     }
+  }
+
+  &__booking-card {
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+    padding: $space-md $space-lg;
+    background-color: $color-white;
+    border: 1px solid darken($color-bg-beige, 8%);
+    border-radius: 8px;
+    text-decoration: none;
+    color: $color-text-dark;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+      border-color: $color-primary;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+
+      .work-with-me__booking-card-arrow {
+        transform: translateX(4px);
+      }
+    }
+  }
+
+  &__booking-card-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background-color: rgba($color-primary, 0.1);
+    color: $color-primary;
+  }
+
+  &__booking-card-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__booking-card-title {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: $color-text-dark;
+  }
+
+  &__booking-card-sub {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 0.82rem;
+    color: $color-text-light;
+  }
+
+  &__booking-card-arrow {
+    flex-shrink: 0;
+    color: $color-primary;
+    @include smooth-transition(transform);
   }
 
   &__contact-item {

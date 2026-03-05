@@ -7,11 +7,13 @@ import "./Navigation.scss";
 interface NavigationProps {
   variant: "desktop" | "mobile";
   isOpen?: boolean;
+  onClose?: () => void;
 }
 
 export const Navigation: React.FC<NavigationProps> = ({
   variant,
   isOpen = false,
+  onClose,
 }) => {
   const navItems = navigationData.filter((item) => item.link !== "*");
 
@@ -42,8 +44,8 @@ export const Navigation: React.FC<NavigationProps> = ({
   }
 
   return (
-    <animated.div className="nav-mobile" style={overlaySpring}>
-      <div className="nav-mobile__items">
+    <animated.div className="nav-mobile" style={overlaySpring} onClick={onClose}>
+      <div className="nav-mobile__items" onClick={(e) => e.stopPropagation()}>
         {trail.map((style, index) => (
           <animated.div key={navItems[index].link} style={style}>
             <NavigationItem

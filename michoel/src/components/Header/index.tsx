@@ -55,7 +55,11 @@ export const Header: React.FC = () => {
         </div>
       </header>
       {showNavigation && (
-        <Navigation variant="mobile" isOpen={showNavigation} />
+        <Navigation
+          variant="mobile"
+          isOpen={showNavigation}
+          onClose={() => setShowNavigation(false)}
+        />
       )}
     </>
   );

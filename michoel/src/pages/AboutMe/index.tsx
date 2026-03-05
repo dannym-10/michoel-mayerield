@@ -100,7 +100,7 @@ export const AboutMe: React.FC = () => {
               Book a free 15-minute phone or WhatsApp video chat — a quick,
               no-pressure conversation to see if we're a good fit.
             </p>
-            <Button text="Get in Touch" to="/work-with-me" />
+            <Button text="Get in Touch" to="/next-steps" />
           </FadeInSection>
         </div>
       </section>

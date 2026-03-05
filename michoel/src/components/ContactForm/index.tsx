@@ -4,31 +4,19 @@ import "./contact-form.scss";
 import { Button } from "../Button";
 
 interface FormData {
-  firstName: string;
-  lastName: string;
+  name: string;
   email: string;
-  phone: string;
+  phone?: string;
   message: string;
 }
 
 export const ContactForm: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const form = useForm<FormData>();
-  const { formState, register, handleSubmit, setError } = form;
+  const { formState, register, handleSubmit } = form;
   const { errors } = formState;
 
   const onSubmit = (data: FormData) => {
-    if (!data.email && !data.phone) {
-      setError("email", {
-        type: "manual",
-        message: "Please provide either an email or phone number",
-      });
-      setError("phone", {
-        type: "manual",
-        message: "Please provide either an email or phone number",
-      });
-      return;
-    }
     console.log("submitting", data);
     setSubmitted(true);
   };
@@ -67,82 +55,52 @@ export const ContactForm: React.FC = () => {
         noValidate
         className="contact-form__form"
       >
-        <div className="contact-form__row">
-          <div className="contact-form__field">
-            <label htmlFor="firstName">
-              First Name <span className="contact-form__required">*</span>
-            </label>
-            <input
-              id="firstName"
-              placeholder="Your first name"
-              className={errors.firstName ? "contact-form__input--error" : ""}
-              {...register("firstName", {
-                required: "First name is required",
-              })}
-            />
-            {errors.firstName && (
-              <span className="contact-form__error">
-                {errors.firstName.message}
-              </span>
-            )}
-          </div>
-          <div className="contact-form__field">
-            <label htmlFor="lastName">
-              Last Name <span className="contact-form__required">*</span>
-            </label>
-            <input
-              id="lastName"
-              placeholder="Your last name"
-              className={errors.lastName ? "contact-form__input--error" : ""}
-              {...register("lastName", {
-                required: "Last name is required",
-              })}
-            />
-            {errors.lastName && (
-              <span className="contact-form__error">
-                {errors.lastName.message}
-              </span>
-            )}
-          </div>
+        <div className="contact-form__field">
+          <label htmlFor="name">
+            Name <span className="contact-form__required">*</span>
+          </label>
+          <input
+            id="name"
+            placeholder="Your name"
+            className={errors.name ? "contact-form__input--error" : ""}
+            {...register("name", { required: "Name is required" })}
+          />
+          {errors.name && (
+            <span className="contact-form__error">{errors.name.message}</span>
+          )}
         </div>
 
-        <div className="contact-form__row">
-          <div className="contact-form__field">
-            <label htmlFor="email">Email Address</label>
-            <input
-              id="email"
-              type="email"
-              placeholder="your@email.com"
-              className={errors.email ? "contact-form__input--error" : ""}
-              {...register("email", {
-                pattern: {
-                  value:
-                    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                  message: "Please enter a valid email address",
-                },
-              })}
-            />
-            {errors.email && (
-              <span className="contact-form__error">
-                {errors.email.message}
-              </span>
-            )}
-          </div>
-          <div className="contact-form__field">
-            <label htmlFor="phone">Phone Number</label>
-            <input
-              id="phone"
-              type="tel"
-              placeholder="Your phone number"
-              className={errors.phone ? "contact-form__input--error" : ""}
-              {...register("phone")}
-            />
-            {errors.phone && (
-              <span className="contact-form__error">
-                {errors.phone.message}
-              </span>
-            )}
-          </div>
+        <div className="contact-form__field">
+          <label htmlFor="email">
+            Email Address <span className="contact-form__required">*</span>
+          </label>
+          <input
+            id="email"
+            type="email"
+            placeholder="your@email.com"
+            className={errors.email ? "contact-form__input--error" : ""}
+            {...register("email", {
+              required: "Email address is required",
+              pattern: {
+                value:
+                  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                message: "Please enter a valid email address",
+              },
+            })}
+          />
+          {errors.email && (
+            <span className="contact-form__error">{errors.email.message}</span>
+          )}
+        </div>
+
+        <div className="contact-form__field">
+          <label htmlFor="phone">Phone Number <span className="contact-form__optional">(optional)</span></label>
+          <input
+            id="phone"
+            type="tel"
+            placeholder="Your phone number"
+            {...register("phone")}
+          />
         </div>
 
         <div className="contact-form__field">

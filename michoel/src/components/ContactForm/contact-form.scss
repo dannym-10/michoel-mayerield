@@ -5,10 +5,6 @@
   padding: $space-xl;
   flex: 1;
 
-  @include desktop {
-    max-width: 520px;
-  }
-
   &--success {
     display: flex;
     align-items: center;
@@ -97,6 +93,12 @@
 
   &__required {
     color: $color-error;
+  }
+
+  &__optional {
+    font-size: 0.8rem;
+    color: $color-text-light;
+    font-weight: 400;
   }
 
   &__error {

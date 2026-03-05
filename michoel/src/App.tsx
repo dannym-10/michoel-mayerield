@@ -7,12 +7,14 @@ import { NotFound } from "./pages/NotFound/NotFound";
 import { navigationData } from "./constants/Navigation";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import { ScrollToTop } from "./components/ScrollToTop";
 import "./App.scss";
 
 export const App = () => {
   return (
     <div className="app">
       <BrowserRouter>
+        <ScrollToTop />
         <Header />
         <main className="app__main">
           <Routes>

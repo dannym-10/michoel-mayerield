@@ -10,12 +10,12 @@ export const navigationData: Navigation[] = [
     link: "about-me",
   },
   {
-    name: "Services",
-    link: "services",
+    name: "Where We Can Meet",
+    link: "where-we-can-meet",
   },
   {
-    name: "Work With Me",
-    link: "work-with-me",
+    name: "Next Steps",
+    link: "next-steps",
   },
   {
     name: "Not Found",

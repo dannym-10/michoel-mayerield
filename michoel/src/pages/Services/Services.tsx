@@ -12,7 +12,7 @@ export const Services: React.FC = () => {
       <section className="services__header">
         <div className="services__header-inner">
           <FadeInSection>
-            <h1>Services</h1>
+            <h1>Where we can meet</h1>
           </FadeInSection>
           <FadeInSection delay={150}>
             <p>
@@ -31,7 +31,9 @@ export const Services: React.FC = () => {
                 <div className="services__card">
                   <div
                     className="services__card-icon"
-                    style={{ backgroundColor: `${ICON_COLORS[index % ICON_COLORS.length]}18` }}
+                    style={{
+                      backgroundColor: `${ICON_COLORS[index % ICON_COLORS.length]}18`,
+                    }}
                   >
                     <svg
                       width="28"
@@ -64,11 +66,11 @@ export const Services: React.FC = () => {
           <FadeInSection delay={150}>
             <p>
               I work integratively, drawing on CBT, DBT, motivational
-              interviewing, person-centred therapy, psychodynamic therapy, schema
-              therapy, and systemic therapy to meet each individual's needs. My
-              practice is built on creating a safe, non-judgemental space where
-              young people can explore their feelings and develop healthier ways
-              of coping.
+              interviewing, person-centred therapy, psychodynamic therapy,
+              schema therapy, and systemic therapy to meet each individual's
+              needs. My practice is built on creating a safe, non-judgemental
+              space where young people can explore their feelings and develop
+              healthier ways of coping.
             </p>
             <p>
               Whether working with substance misuse, behavioural addictions, or
@@ -88,7 +90,7 @@ export const Services: React.FC = () => {
               Book a free 15-minute phone or WhatsApp video chat — a quick,
               no-pressure conversation to see if we're a good fit.
             </p>
-            <Button text="Work With Me" to="/work-with-me" />
+            <Button text="Next Steps" to="/next-steps" />
           </FadeInSection>
         </div>
       </section>

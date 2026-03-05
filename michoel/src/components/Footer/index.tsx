@@ -10,12 +10,12 @@ export const Footer: React.FC = () => {
       <div className="footer__inner">
         <div className="footer__grid">
           <div className="footer__col">
-            <h3 className="footer__brand">Michael Mayerfeld</h3>
+            <h4 className="footer__col-title">Michael Mayerfeld</h4>
             <p className="footer__tagline">
               Counsellor & Addiction Psychotherapist
             </p>
             <p className="footer__location">
-              Hertfordshire & North West London
+              London Maida Vale, Borehamwood and Online
             </p>
           </div>
 
@@ -40,11 +40,11 @@ export const Footer: React.FC = () => {
             <Link to="/about-me" className="footer__link">
               About Me
             </Link>
-            <Link to="/services" className="footer__link">
-              Services
+            <Link to="/where-we-can-meet" className="footer__link">
+              Where We Can Meet
             </Link>
-            <Link to="/work-with-me" className="footer__link">
-              Work With Me
+            <Link to="/next-steps" className="footer__link">
+              Next Steps
             </Link>
           </div>
 
