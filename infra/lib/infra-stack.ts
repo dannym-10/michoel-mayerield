@@ -18,9 +18,7 @@ export class InfraStack extends cdk.Stack {
     // 2️⃣ Deploy your Vite dist/ folder into the bucket
     new s3deploy.BucketDeployment(this, "MichaelMayerfeldDeployment", {
       sources: [
-        s3deploy.Source.asset(
-          path.resolve(__dirname, "michoel-mayerield/micky/dist"),
-        ),
+        s3deploy.Source.asset(path.resolve(__dirname, "../../michoel/dist")),
       ],
       destinationBucket: bucket,
     });
