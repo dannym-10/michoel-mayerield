@@ -58,30 +58,6 @@ export const WhereWeCanMeet: React.FC = () => {
         </div>
       </section>
 
-      <section className="where-we-can-meet__approach">
-        <div className="where-we-can-meet__approach-inner">
-          <FadeInSection>
-            <h2>My Approach</h2>
-          </FadeInSection>
-          <FadeInSection delay={150}>
-            <p>
-              I work integratively, drawing on CBT, DBT, motivational
-              interviewing, person-centred therapy, psychodynamic therapy,
-              schema therapy, and systemic therapy to meet each individual's
-              needs. My practice is built on creating a safe, non-judgemental
-              space where young people can explore their feelings and develop
-              healthier ways of coping.
-            </p>
-            <p>
-              Whether working with substance misuse, behavioural addictions, or
-              wider mental health challenges, I believe in addressing the root
-              causes rather than just the symptoms. Every person's journey is
-              different, and therapy should reflect that.
-            </p>
-          </FadeInSection>
-        </div>
-      </section>
-
       <section className="where-we-can-meet__cta">
         <div className="where-we-can-meet__cta-inner">
           <FadeInSection>

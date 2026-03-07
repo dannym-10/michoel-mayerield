@@ -13,7 +13,10 @@ export const AboutMe: React.FC = () => {
             <h1>About Me</h1>
           </FadeInSection>
           <FadeInSection delay={150}>
-            <p>Counsellor and Addiction Psychotherapist for young people and families.</p>
+            <p>
+              Counsellor and Addiction Psychotherapist for young people and
+              families.
+            </p>
           </FadeInSection>
         </div>
       </section>
@@ -33,8 +36,8 @@ export const AboutMe: React.FC = () => {
             <div className="about__text">
               <h2>My Story</h2>
               <p>
-                I'm an expert in adolescent stress and addiction recovery with an
-                MSc in Addiction Psychology and Counselling, a decade of
+                I'm an expert in adolescent stress and addiction recovery with
+                an MSc in Addiction Psychology and Counselling, a decade of
                 experience as a youth worker, and clinical roles in schools and
                 an adolescent therapy charity. I can help with anxiety, low
                 self-esteem, exam stress, substance use, behavioural addictions,
@@ -42,10 +45,10 @@ export const AboutMe: React.FC = () => {
               </p>
               <p>
                 I have specialist training in supporting young people in the
-                field of addiction. I can help with drug and alcohol use, whether
-                you are experimenting or if it feels more complex. I also help
-                young people affected by other people's addiction, and I
-                recognise the bravery of parents reaching out when they think
+                field of addiction. I can help with drug and alcohol use,
+                whether you are experimenting or if it feels more complex. I
+                also help young people affected by other people's addiction, and
+                I recognise the bravery of parents reaching out when they think
                 their use may be impacting their children.
               </p>
               <p>
@@ -59,11 +62,25 @@ export const AboutMe: React.FC = () => {
                 providing a safe and inclusive counselling space for LGBTQ+
                 clients.
               </p>
+              <h2>My Approach</h2>
+              <p>
+                I work integratively, drawing on CBT, DBT, motivational
+                interviewing, person-centred therapy, psychodynamic therapy,
+                schema therapy, and systemic therapy to meet each individual's
+                needs. My practice is built on creating a safe, non-judgemental
+                space where young people can explore their feelings and develop
+                healthier ways of coping.
+              </p>
+              <p>
+                Whether working with substance misuse, behavioural addictions,
+                or wider mental health challenges, I believe in addressing the
+                root causes rather than just the symptoms. Every person's
+                journey is different, and therapy should reflect that.
+              </p>
             </div>
           </FadeInSection>
         </div>
       </section>
-
       <section className="about__qualifications">
         <div className="about__qualifications-inner">
           <FadeInSection>
@@ -75,13 +92,11 @@ export const AboutMe: React.FC = () => {
                 Advanced Practitioner and Accredited Member of Addiction
                 Professionals
               </li>
-              <li>
-                MSc in Addiction Psychology and Counselling
-              </li>
+              <li>MSc in Addiction Psychology and Counselling</li>
               <li>Qualified Youth Worker</li>
               <li>
-                Registered member of the BACP (British Association for Counselling
-                and Psychotherapy)
+                Registered member of the BACP (British Association for
+                Counselling and Psychotherapy)
               </li>
               <li>
                 Member of the Registration, body and network for Addiction

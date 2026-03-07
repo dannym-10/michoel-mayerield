@@ -77,26 +77,6 @@
     line-height: 1.7;
   }
 
-  &__approach {
-    @include section-padding;
-    background-color: $color-bg-beige;
-  }
-
-  &__approach-inner {
-    max-width: 720px;
-    margin: 0 auto;
-    text-align: center;
-
-    h2 {
-      margin-bottom: $space-xl;
-    }
-
-    p {
-      margin-bottom: $space-md;
-      text-align: left;
-    }
-  }
-
   &__cta {
     background-color: $color-primary;
     padding: $space-3xl $mobile-padding;
