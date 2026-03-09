@@ -5,15 +5,35 @@ import * as s3deploy from "aws-cdk-lib/aws-s3-deployment";
 import * as path from "path";
 import * as cloudfront from "aws-cdk-lib/aws-cloudfront";
 import * as origins from "aws-cdk-lib/aws-cloudfront-origins";
+import * as route53 from "aws-cdk-lib/aws-route53";
+import * as certificatemanager from "aws-cdk-lib/aws-certificatemanager";
+import * as route53targets from "aws-cdk-lib/aws-route53-targets";
 
 export class InfraStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
+    const domainName = "michaelmayerfeld.co.uk";
+    const wwwDomain = `www.${domainName}`;
+
+    const hostedZone = route53.HostedZone.fromLookup(this, "HostedZone", {
+      domainName,
+    });
+
+    const certificate = new certificatemanager.DnsValidatedCertificate(
+      this,
+      "SiteCertificate",
+      {
+        domainName,
+        subjectAlternativeNames: [wwwDomain],
+        hostedZone,
+        region: "us-east-1",
+      },
+    );
+
     const bucket = new s3.Bucket(this, "MichaelMayerfeldBucket", {
       blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
       encryption: s3.BucketEncryption.S3_MANAGED,
-      bucketName: "michaelmayerfeld.co.uk",
     });
 
     const originAccessControl = new cloudfront.S3OriginAccessControl(
@@ -36,8 +56,33 @@ export class InfraStack extends cdk.Stack {
             cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
         },
         defaultRootObject: "index.html",
+        errorResponses: [
+          {
+            httpStatus: 404,
+            responseHttpStatus: 200,
+            responsePagePath: "/index.html",
+          },
+        ],
+        domainNames: [domainName, wwwDomain],
+        certificate,
       },
     );
+
+    new route53.ARecord(this, "AliasRecord", {
+      zone: hostedZone,
+      target: route53.RecordTarget.fromAlias(
+        new route53targets.CloudFrontTarget(distribution),
+      ),
+      recordName: domainName,
+    });
+
+    new route53.ARecord(this, "AliasRecordWWW", {
+      zone: hostedZone,
+      target: route53.RecordTarget.fromAlias(
+        new route53targets.CloudFrontTarget(distribution),
+      ),
+      recordName: "www",
+    });
 
     new s3deploy.BucketDeployment(this, "MichaelMayerfeldDeployment", {
       sources: [
@@ -47,5 +92,7 @@ export class InfraStack extends cdk.Stack {
       distribution,
       distributionPaths: ["/*"],
     });
+
+    new cdk.CfnOutput(this, "WebsiteURL", { value: `https://${domainName}` });
   }
 }

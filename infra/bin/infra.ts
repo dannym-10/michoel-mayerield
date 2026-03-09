@@ -1,9 +1,13 @@
 #!/usr/bin/env node
-import * as cdk from 'aws-cdk-lib/core';
-import { InfraStack } from '../lib/infra-stack';
+import * as cdk from "aws-cdk-lib";
+import { InfraStack } from "../lib/infra-stack";
 
 const app = new cdk.App();
-new InfraStack(app, 'InfraStack', {
+new InfraStack(app, "InfraStack", {
+  env: {
+    account: process.env.CDK_DEFAULT_ACCOUNT,
+    region: process.env.CDK_DEFAULT_REGION || "eu-west-1",
+  },
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
