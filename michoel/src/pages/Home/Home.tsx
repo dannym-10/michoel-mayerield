@@ -3,6 +3,9 @@ import { Accordion } from "../../components/Accordion";
 import { Button } from "../../components/Button";
 import { FadeInSection } from "../../components/FadeInSection";
 import "./home.scss";
+import { Cognition } from "../../assets/SVGs/Cognition";
+import { Rollercoaster } from "../../assets/SVGs/Rollercoaster";
+import { SadSitting } from "../../assets/SVGs/SadSitting";
 
 export const Home: React.FC = () => {
   return (
@@ -11,16 +14,13 @@ export const Home: React.FC = () => {
         <div className="home__hero-inner">
           <FadeInSection>
             <h1 className="home__hero-title">
-              Supporting Young People Through Life's Challenges
+              Helping people find their way forward
             </h1>
           </FadeInSection>
           <FadeInSection delay={150}>
             <p className="home__hero-subtitle">
-              If your child is overwhelmed, misunderstood, or struggling, you
-              don't have to wait months for CAMHS. I offer professional
-              counselling and addiction psychotherapy for children, young
-              people, and young adults in Hertfordshire, North-West London and
-              online.
+              Specialist therapy supporting young people and young adults
+              through emotional challenges and addiction.
             </p>
           </FadeInSection>
           <FadeInSection delay={300}>
@@ -45,114 +45,71 @@ export const Home: React.FC = () => {
             <FadeInSection delay={100}>
               <div className="home__feature-card">
                 <div className="home__feature-icon">
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-                  </svg>
+                  <SadSitting height={50} width={50} />
                 </div>
-                <h3>Psychotherapy</h3>
+                <h3>Therapy for Adolescents</h3>
                 <p>
-                  At Michael Mayerfeld Psychotherapy, I offer gentle,
-                  compassionate psychotherapy for adults and young people facing
-                  a range of emotional and mental health challenges. You may be
-                  struggling with anxiety, depression, low self-esteem, trauma,
-                  grief, relationship difficulties, identity questions, or
-                  simply feeling overwhelmed. Whatever brings you to therapy, I
-                  provide a calm, non-judgemental space where you can speak
-                  openly and feel truly heard. My approach is collaborative and
-                  tailored to you. We move at a pace that feels safe, exploring
-                  patterns and experiences with care and curiosity. Drawing on
-                  evidence-based approaches including CBT, psychodynamic
-                  understanding, and emotional regulation strategies, I adapt
-                  therapy to your individual needs. Above all, I aim to support
-                  you in building insight, resilience, and self-understanding,
-                  helping you move toward meaningful and lasting change with
-                  warmth, respect, and kindness.
+                  If your child is overwhelmed, misunderstood, refusing school,
+                  self harming, or you are worried about them in any way, you do
+                  not have to wait months or years for CAMHS support. There does
+                  not have to be something deeply wrong, it could just feel like
+                  things simply are a little off, perhaps exam stress,
+                  friendship difficulties or loneliness. Having the right space
+                  to talk can make a real difference and working with teenage
+                  young people is my specific area of experience. Sessions
+                  respect a child's confidentiality, but safeguarding remains
+                  central, so I will communicate with parents if any safety
+                  concerns arise. Therapy often results in calmer family life,
+                  fewer crises, clearer steps to support your child, and renewed
+                  hope for the future.
                 </p>
               </div>
             </FadeInSection>
             <FadeInSection delay={200}>
               <div className="home__feature-card">
                 <div className="home__feature-icon">
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                  </svg>
+                  <Cognition height={50} width={50} />
                 </div>
-                <h3>Therapy for Adolescence</h3>
+                <h3>Neurodiversity</h3>
                 <p>
-                  Adolescence can feel overwhelming—for teens and for parents.
-                  As a licensed therapist specializing in adolescent therapy, I
-                  provide a supportive, nonjudgmental space where teens can talk
-                  openly about anxiety, depression, friendships, identity,
-                  school stress, family conflict, and life transitions. My
-                  approach is warm, collaborative, and tailored to each young
-                  person's needs. I blend evidence-based techniques like
-                  cognitive behavioral therapy (CBT), emotional regulation
-                  skills, and mindfulness with genuine connection and humor to
-                  help teens feel understood and empowered. Together, we build
-                  coping tools, strengthen communication, and develop resilience
-                  that extends beyond the therapy room. I also partner with
-                  parents when appropriate, offering guidance and feedback to
-                  support progress at home. My goal is to help adolescents grow
-                  in confidence, self-awareness, and emotional strength so they
-                  can navigate challenges and move forward with clarity,
-                  balance, and hope.
+                  Specialist neuroaffirming therapy supports neurodivergent
+                  young people in a space where they do not have to mask or
+                  explain themselves to be understood. Alongside my private
+                  practice, I work for a well established charity in London
+                  specifically supporting ADHD and autistic young people, which
+                  informs my work. I recognise that some young people experience
+                  alexithymia, making it difficult to identify or name emotions,
+                  so therapy does not rely on open questions or expect immediate
+                  answers about feelings. Sessions are structured and
+                  predictable, offering a routine that helps reduce anxiety when
+                  the world feels overwhelming. I adapt how I communicate,
+                  remain mindful of sensory needs, and move at each young
+                  person's pace so they can engage in ways that feel comfortable
+                  and safe.
                 </p>
               </div>
             </FadeInSection>
             <FadeInSection delay={300}>
               <div className="home__feature-card">
                 <div className="home__feature-icon">
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M12 22c4-4 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 4 8 8 12z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
+                  <Rollercoaster height={50} width={50} />
                 </div>
                 <h3>Addiction</h3>
                 <p>
-                  At Michael Mayerfeld Psychotherapy, I provide specialist
-                  addiction psychotherapy for a wide range of behavioural and
-                  substance-related difficulties. Addiction can take many
-                  forms—alcohol or drug misuse, gambling, gaming, pornography,
-                  sex, shopping, social media, or compulsive relationship
-                  patterns—and often develops as a way of coping with distress,
-                  trauma, anxiety, or low self-worth. Together, we explore not
-                  just the behaviour itself, but the underlying emotional
-                  drivers that keep the cycle going. With an MSc in Addiction
-                  Psychology & Counselling and membership with Addiction
-                  Professionals (ADAP), I use evidence-based approaches
-                  including CBT, motivational interviewing, relapse prevention,
-                  and emotional regulation strategies. Therapy is collaborative,
-                  compassionate, and paced to suit you. My aim is to help you
-                  regain control, strengthen resilience, and build healthier
-                  ways of meeting your needs for the long term.
+                  If you are struggling to keep up with your friends and using
+                  substances more than you would like, therapy can offer a
+                  supportive space to make sense of what is happening. I offer
+                  young people and young adults personalised therapy that helps
+                  when gaming, gambling, or pornography is becoming difficult to
+                  regulate. Using the best evidence-informed outcomes for
+                  addiction related challenges, you can explore compulsive
+                  behaviours in a way that feels understanding and modern.
+                  Whether these patterns are just starting to appear, have been
+                  affecting your life for some time, or someone else's addictive
+                  behaviours are impacting you, support can help you regain
+                  control. Because addiction still carries so much stigma,
+                  therapy provides a confidential, compassionate, and
+                  non-judgemental space to talk openly.
                 </p>
               </div>
             </FadeInSection>
