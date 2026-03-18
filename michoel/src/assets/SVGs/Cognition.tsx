@@ -14,7 +14,7 @@ export const Cognition: React.FC<CognitionProps> = ({ width, height }) => (
     viewBox="0 0 400 400"
   >
     <path
-      stroke="#000"
+      stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeOpacity={0.9}
@@ -22,7 +22,7 @@ export const Cognition: React.FC<CognitionProps> = ({ width, height }) => (
       d="M193.34 155.547c-27.882-14.795-34.122-11.273-43.085 14.798-1.371 3.994-6.514 13.019-5.386 17.406 1.751 6.792 34.59 22.729 39.496 14.798 7.758-12.539 10.238-28.562 17.053-41.78"
     />
     <path
-      stroke="#000"
+      stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeOpacity={0.9}
@@ -30,7 +30,7 @@ export const Cognition: React.FC<CognitionProps> = ({ width, height }) => (
       d="M167.819 175.018c-5.093 0-43.416-.858-44.028-2.739-.647-1.993 24.461-69.898 31.53-58.161 5.407 8.978 13.714 47.615 16.676 61.66M180.75 98.475c6.388-8.28 18.419-10.078 26.216-1.797 7.915 8.406 9.253 23.85 2.45 32.876-7.198 9.55-23.037 12.329-32.048 7.543-17.41-9.244-4.881-41.316 12.686-41.316"
     />
     <path
-      stroke="#000"
+      stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeOpacity={0.9}
@@ -39,7 +39,7 @@ export const Cognition: React.FC<CognitionProps> = ({ width, height }) => (
       opacity={0.503}
     />
     <path
-      stroke="#000"
+      stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeOpacity={0.9}

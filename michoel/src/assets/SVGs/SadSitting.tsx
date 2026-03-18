@@ -14,7 +14,7 @@ export const SadSitting: React.FC<SadSittingProps> = ({ height, width }) => (
     viewBox="0 0 400 400"
   >
     <path
-      stroke="#000"
+      stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeOpacity={0.9}
@@ -22,7 +22,7 @@ export const SadSitting: React.FC<SadSittingProps> = ({ height, width }) => (
       d="M177.818 76.035c15.31-13.156 41.747-19.688 61.859-11.265 64.932 27.189 29.423 118.682-35.649 109.599-43.861-6.121-41.445-90.196-7.337-104.48M142.592 149c-31.028 33.552-51.143 137.487-34.729 180.195 1.768 4.589 6.218 5.636 9.587 2.115 38.142-23.31 84.083-63.311 119.36-96.968 1.67-1.594 3.786-1.757 5.937-1.484.593.759.514 1.567.436 2.364-1.267 12.778-1.872 37.155-2.187 49.997-.288 11.663-1.519 23.314-1.432 35.006.021 2.89-.28 9.215 0 12.085.216 2.199 4.651 3.414 3.619 5.738"
     />
     <path
-      stroke="#000"
+      stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeOpacity={0.9}
