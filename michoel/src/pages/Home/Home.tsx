@@ -19,8 +19,8 @@ export const Home: React.FC = () => {
           </FadeInSection>
           <FadeInSection delay={150}>
             <p className="home__hero-subtitle">
-              Specialist therapy supporting young people and young adults
-              through emotional challenges and addiction.
+              Specialist therapy for young people and young adults in
+              Hertfordshire and North-West London.
             </p>
           </FadeInSection>
           <FadeInSection delay={300}>

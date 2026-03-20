@@ -2,28 +2,36 @@ import { AccordionData } from "../types/Navigation";
 
 export const homeAccordionData: AccordionData[] = [
   {
-    title: "What happens in the first session?",
-    description:
-      "The first session is an opportunity for us to get to know each other. We'll discuss what's brought you to counselling, what you'd like to achieve, and I'll explain how the process works. There's no pressure to share more than you're comfortable with.",
+    title: "What is the session fee?",
+    description: "The cost per session is £75.",
   },
   {
-    title: "How long does therapy usually last?",
-    description:
-      "The length of therapy varies from person to person. Some people find that a few sessions are enough, while others benefit from longer-term support. We'll regularly review your progress together and decide what works best for you.",
+    title: "Do you work with children and what age is a young adult?",
+    description: `I support young people only from age 11 and up. With children of this age, I hold safeguarding and parental concerns carefully in mind and will always communicate clearly if there are worries related to their safety.\n\nI also support adults up to the age of 30, although this is not a strict cut-off that I always adhere to.`,
   },
   {
-    title: "Is everything I say confidential?",
+    title: "What if my child doesn't want to come to therapy?",
     description:
-      "Yes, confidentiality is a cornerstone of our work together. Everything discussed in sessions is kept strictly confidential. The only exceptions are if there is a risk of serious harm to you or someone else, which I would discuss with you first wherever possible.",
+      "Beginning this work is always discussed and agreed together with the young person so that everyone feels comfortable. I can however also speak with a young person during the enquiry call, so they can get a clear sense of what I am like before agreeing to a first session.",
   },
   {
-    title: "Do you work with parents and families?",
+    title: "Is what I say confidential?",
     description:
-      "Absolutely. I understand that when a young person is struggling, it affects the whole family. I collaborate with families and actively involve parents and caregivers. Parents and carers are welcome to join the first session if this would be helpful.",
+      "Yes, I am incredibly strict on privacy and confidentiality. The exception to this is if I feel you are a risk to yourself or to others and where possible, I will always inform you before sharing information.",
   },
   {
-    title: "Can sessions be online?",
+    title: "What kind of updates can I expect as a parent?",
     description:
-      "Yes, I offer face-to-face sessions in Hertfordshire (Borehamwood) and North-West London (Maida Vale), as well as online sessions via Zoom. This flexibility allows you to choose the format that works best for your circumstances.",
+      "Young people often ask me, “Will you tell my parents what I say?” and this depends on their age and circumstances. When appropriate and in the best interests of the young person, I offer parents a check-in review call every 6 to 8 weeks. Parent support is essential for the young person to flourish in Therapy.",
+  },
+  {
+    title: "Do you offer family support?",
+    description:
+      "After a couple of months of individual sessions, where helpful, we can introduce a family session, which would happen alongside the individual work.",
+  },
+  {
+    title: "How many therapy sessions will I have?",
+    description:
+      "The length of therapy varies from person to person. Some people find that a few sessions are enough, while others benefit from longer-term support. As I work in an open ended way, you are not committing to a set number of sessions, and there is no fixed end point when things are going well.",
   },
 ];
