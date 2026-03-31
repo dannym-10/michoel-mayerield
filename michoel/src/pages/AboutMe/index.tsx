@@ -1,5 +1,5 @@
 import React from "react";
-import mickyPortrait from "../../assets/michael-mayerfeld-portrait-image.jpg";
+import mickyPortrait from "../../assets/Images/michael-mayerfeld-portrait-image.jpg";
 import { Button } from "../../components/Button";
 import { FadeInSection } from "../../components/FadeInSection";
 import "./about-me.scss";

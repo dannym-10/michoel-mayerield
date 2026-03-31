@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import apLogo from "../../assets/ap-logo.png";
-import bacpLogo from "../../assets/bacp-logo.png";
+import apLogo from "../../assets/images/ap-logo.png";
+import bacpLogo from "../../assets/images/bacp-logo.png";
 import "./Footer.scss";
 
 export const Footer: React.FC = () => {
