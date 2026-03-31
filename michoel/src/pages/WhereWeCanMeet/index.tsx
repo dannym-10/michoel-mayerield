@@ -2,9 +2,18 @@ import React from "react";
 import { whereWeCanMeetData } from "../../constants/WhereWeCanMeet";
 import { Button } from "../../components/Button";
 import { FadeInSection } from "../../components/FadeInSection";
+import { BigBenIcon } from "../../assets/SVGs/BigBenIcon";
+import { TrainIcon } from "../../assets/SVGs/TrainIcon";
+import { LaptopIcon } from "../../assets/SVGs/LaptopIcon";
 import "./where-we-can-meet.scss";
 
 const ICON_COLORS = ["#5B7B5E", "#C2A97E", "#A68B5B", "#8FA98F", "#3D5A40"];
+
+const ICON_MAP = {
+  bigben: BigBenIcon,
+  train: TrainIcon,
+  laptop: LaptopIcon,
+} as const;
 
 export const WhereWeCanMeet: React.FC = () => {
   return (
@@ -15,10 +24,7 @@ export const WhereWeCanMeet: React.FC = () => {
             <h1>Where we can meet</h1>
           </FadeInSection>
           <FadeInSection delay={150}>
-            <p>
-              I offer specialist support across a wide range of areas, tailored
-              to the unique needs of each individual.
-            </p>
+            <p>Sessions are available in London, Borehamwood, or online</p>
           </FadeInSection>
         </div>
       </section>
@@ -35,22 +41,23 @@ export const WhereWeCanMeet: React.FC = () => {
                       backgroundColor: `${ICON_COLORS[index % ICON_COLORS.length]}18`,
                     }}
                   >
-                    <svg
-                      width="28"
-                      height="28"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke={ICON_COLORS[index % ICON_COLORS.length]}
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <circle cx="12" cy="12" r="10" />
-                      <path d="M12 8v8M8 12h8" />
-                    </svg>
+                    {(() => {
+                      const IconComponent = ICON_MAP[item.icon];
+                      return (
+                        <IconComponent
+                          width={40}
+                          height={40}
+                          color={ICON_COLORS[index % ICON_COLORS.length]}
+                        />
+                      );
+                    })()}
                   </div>
-                  <h3 className="where-we-can-meet__card-title">{item.title}</h3>
-                  <p className="where-we-can-meet__card-desc">{item.description}</p>
+                  <h3 className="where-we-can-meet__card-title">
+                    {item.title}
+                  </h3>
+                  <p className="where-we-can-meet__card-desc">
+                    {item.description}
+                  </p>
                 </div>
               </FadeInSection>
             ))}
