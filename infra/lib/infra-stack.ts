@@ -8,6 +8,10 @@ import * as origins from "aws-cdk-lib/aws-cloudfront-origins";
 import * as route53 from "aws-cdk-lib/aws-route53";
 import * as certificatemanager from "aws-cdk-lib/aws-certificatemanager";
 import * as route53targets from "aws-cdk-lib/aws-route53-targets";
+import * as lambda from "aws-cdk-lib/aws-lambda";
+import * as apigw from "aws-cdk-lib/aws-apigateway";
+import * as iam from "aws-cdk-lib/aws-iam";
+import * as lambdaNode from "aws-cdk-lib/aws-lambda-nodejs";
 
 export class InfraStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
@@ -58,6 +62,11 @@ export class InfraStack extends cdk.Stack {
         defaultRootObject: "index.html",
         errorResponses: [
           {
+            httpStatus: 403,
+            responseHttpStatus: 200,
+            responsePagePath: "/index.html",
+          },
+          {
             httpStatus: 404,
             responseHttpStatus: 200,
             responsePagePath: "/index.html",
@@ -94,5 +103,38 @@ export class InfraStack extends cdk.Stack {
     });
 
     new cdk.CfnOutput(this, "WebsiteURL", { value: `https://${domainName}` });
+
+    //
+    // Send Email Lambda
+    //
+    const contactLambda = new lambdaNode.NodejsFunction(
+      this,
+      "MichaelMayerfeldEmailLambda",
+      {
+        entry: path.join(__dirname, "../lambdas/sendEmail/index.ts"),
+        handler: "handler",
+        runtime: lambda.Runtime.NODEJS_20_X,
+        environment: { FROM_EMAIL: "dannymoss4@gmail.com" },
+        bundling: {
+          externalModules: ["aws-sdk"],
+          forceDockerBundling: false,
+        },
+      },
+    );
+
+    contactLambda.addToRolePolicy(
+      new iam.PolicyStatement({
+        actions: ["ses:SendEmail", "ses:SendRawEmail"],
+        resources: ["*"],
+      }),
+    );
+
+    const api = new apigw.LambdaRestApi(this, "MichaelMayerfeldContactApi", {
+      handler: contactLambda,
+      proxy: false,
+    });
+
+    const contact = api.root.addResource("contact");
+    contact.addMethod("POST");
   }
 }
