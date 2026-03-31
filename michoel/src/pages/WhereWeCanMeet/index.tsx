@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { whereWeCanMeetData } from "../../constants/WhereWeCanMeet";
 import { Button } from "../../components/Button";
 import { FadeInSection } from "../../components/FadeInSection";
 import { BigBenIcon } from "../../assets/SVGs/BigBenIcon";
 import { TrainIcon } from "../../assets/SVGs/TrainIcon";
 import { LaptopIcon } from "../../assets/SVGs/LaptopIcon";
+import maidaValeImg from "../../assets/Images/maida-vale.jpg";
+import borehamwoodImg from "../../assets/Images/borehamwood.jpg";
+import onlineImg from "../../assets/Images/online.jpg";
 import "./where-we-can-meet.scss";
 
-const ICON_COLORS = ["#5B7B5E", "#C2A97E", "#A68B5B", "#8FA98F", "#3D5A40"];
+const COLOR_PRIMARY = "#5B7B5E";
 
 const ICON_MAP = {
   bigben: BigBenIcon,
@@ -15,7 +18,18 @@ const ICON_MAP = {
   laptop: LaptopIcon,
 } as const;
 
+const IMAGE_MAP = {
+  "maida-vale": maidaValeImg,
+  borehamwood: borehamwoodImg,
+  online: onlineImg,
+} as const;
+
 export const WhereWeCanMeet: React.FC = () => {
+  const [activeImage, setActiveImage] = useState<{
+    src: string;
+    title: string;
+  } | null>(null);
+
   return (
     <div className="where-we-can-meet">
       <section className="where-we-can-meet__header">
@@ -35,19 +49,14 @@ export const WhereWeCanMeet: React.FC = () => {
             {whereWeCanMeetData.map((item, index) => (
               <FadeInSection key={item.title} delay={index * 80}>
                 <div className="where-we-can-meet__card">
-                  <div
-                    className="where-we-can-meet__card-icon"
-                    style={{
-                      backgroundColor: `${ICON_COLORS[index % ICON_COLORS.length]}18`,
-                    }}
-                  >
+                  <div className="where-we-can-meet__card-icon">
                     {(() => {
                       const IconComponent = ICON_MAP[item.icon];
                       return (
                         <IconComponent
-                          width={40}
-                          height={40}
-                          color={ICON_COLORS[index % ICON_COLORS.length]}
+                          width={50}
+                          height={50}
+                          color={COLOR_PRIMARY}
                         />
                       );
                     })()}
@@ -58,6 +67,17 @@ export const WhereWeCanMeet: React.FC = () => {
                   <p className="where-we-can-meet__card-desc">
                     {item.description}
                   </p>
+                  <button
+                    className="btn btn--outline"
+                    onClick={() =>
+                      setActiveImage({
+                        src: IMAGE_MAP[item.imageKey],
+                        title: item.title,
+                      })
+                    }
+                  >
+                    View location
+                  </button>
                 </div>
               </FadeInSection>
             ))}
@@ -77,6 +97,31 @@ export const WhereWeCanMeet: React.FC = () => {
           </FadeInSection>
         </div>
       </section>
+
+      {activeImage && (
+        <div
+          className="where-we-can-meet__modal-backdrop"
+          onClick={() => setActiveImage(null)}
+        >
+          <div
+            className="where-we-can-meet__modal"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="where-we-can-meet__modal-close"
+              onClick={() => setActiveImage(null)}
+              aria-label="Close"
+            >
+              ✕
+            </button>
+            <img
+              src={activeImage.src}
+              alt={activeImage.title}
+              className="where-we-can-meet__modal-image"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -85,7 +85,12 @@
     @include card;
     padding: $space-xl;
     text-align: center;
+    @include smooth-transition(transform);
     height: 100%;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
 
     h3 {
       margin: $space-md 0 $space-sm;

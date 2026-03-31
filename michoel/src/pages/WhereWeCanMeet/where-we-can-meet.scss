@@ -50,6 +50,10 @@
   &__card {
     @include card;
     padding: $space-xl;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include smooth-transition(transform);
     height: 100%;
 
@@ -62,9 +66,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
+    background-color: rgba($color-primary, 0.1);
     margin-bottom: $space-md;
   }
 
@@ -75,6 +80,64 @@
   &__card-desc {
     font-size: 0.9rem;
     line-height: 1.7;
+    margin-bottom: $space-lg;
+  }
+
+  .btn {
+    margin-top: auto;
+    font-size: 0.8rem;
+    padding: 8px 20px;
+  }
+
+&__modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: $space-lg;
+  }
+
+  &__modal {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
+  }
+
+  &__modal-close {
+    position: absolute;
+    top: $space-sm;
+    right: $space-sm;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: $color-white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include smooth-transition(background-color);
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &__modal-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: cover;
   }
 
   &__cta {
