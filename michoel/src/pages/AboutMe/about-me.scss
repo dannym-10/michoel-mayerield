@@ -108,12 +108,48 @@
   }
 
   &__qualifications-inner {
-    max-width: 720px;
+    max-width: $global-width;
     margin: 0 auto;
+  }
 
+  &__qual-grid {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2xl;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr;
+      column-gap: $space-2xl;
+      row-gap: 0;
+    }
+
+    @include desktop {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr;
+      column-gap: $space-3xl;
+      row-gap: 0;
+    }
+  }
+
+  &__qual-col {
     h2 {
       text-align: center;
       margin-bottom: $space-xl;
+    }
+
+    @include tablet {
+      display: grid;
+      grid-row: span 2;
+      grid-template-rows: subgrid;
+    }
+
+    @include desktop {
+      display: grid;
+      grid-row: span 2;
+      grid-template-rows: subgrid;
     }
   }
 

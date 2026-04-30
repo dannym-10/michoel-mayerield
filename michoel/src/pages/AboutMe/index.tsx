@@ -107,56 +107,63 @@ export const AboutMe: React.FC = () => {
       </section>
       <section className="about__qualifications">
         <div className="about__qualifications-inner">
-          <FadeInSection>
-            <h2>Qualifications, Memberships and Professional Standards</h2>
-          </FadeInSection>
-          <FadeInSection delay={150}>
-            <ul className="about__qual-list">
-              <li>
-                Counsellor and Psychotherapist, Registered Member of the BACP
-              </li>
-              <li>MSc in Addiction Psychology and Counselling</li>
-              <li>
-                Advanced Practitioner and Accredited Member of Addiction
-                Professionals
-              </li>
-              <li>Registered with the ICO</li>
-              <li>
-                Fully insured with professional indemnity and public liability
-                insurance
-              </li>
-              <li>Enhanced DBS on the Update Service</li>
-              <li>Level 3 Safeguarding Children and Young People</li>
-            </ul>
-          </FadeInSection>
-          <FadeInSection>
-            <h2>Ongoing Training</h2>
-          </FadeInSection>
-          <FadeInSection delay={150}>
-            <ul className="about__qual-list">
-              <li>Eating disorder (NHS CNWL, Stride)</li>
-              <li>
-                How to work with people with pornography addiction (Laurel
-                Centre)
-              </li>
-              <li>
-                Understanding and working with Eating Disorders in Children and
-                Young People (Brent Centre for Young People)
-              </li>
-              <li>
-                Intercultural Psychotherapy - Equality, diversity and inclusion
-                training (Nasfiyat)
-              </li>
-              <li>
-                Complex Trauma and Trauma Informed Care (Change Grow Live)
-              </li>
-              <li>
-                Working with autistic Young People (Brent Centre for Young
-                People)
-              </li>
-              <li>Women, Young people and Problem gambling (Gamcare)</li>
-            </ul>
-          </FadeInSection>
+          <div className="about__qual-grid">
+            <div className="about__qual-col">
+              <FadeInSection>
+                <h2>Qualifications, Memberships and Professional Standards</h2>
+              </FadeInSection>
+              <FadeInSection delay={150}>
+                <ul className="about__qual-list">
+                  <li>
+                    Counsellor and Psychotherapist, Registered Member of the
+                    BACP
+                  </li>
+                  <li>MSc in Addiction Psychology and Counselling</li>
+                  <li>
+                    Advanced Practitioner and Accredited Member of Addiction
+                    Professionals
+                  </li>
+                  <li>Registered with the ICO</li>
+                  <li>
+                    Fully insured with professional indemnity and public
+                    liability insurance
+                  </li>
+                  <li>Enhanced DBS on the Update Service</li>
+                  <li>Level 3 Safeguarding Children and Young People</li>
+                </ul>
+              </FadeInSection>
+            </div>
+            <div className="about__qual-col">
+              <FadeInSection>
+                <h2>Ongoing Training</h2>
+              </FadeInSection>
+              <FadeInSection delay={150}>
+                <ul className="about__qual-list">
+                  <li>Eating disorder (NHS CNWL, Stride)</li>
+                  <li>
+                    How to work with people with pornography addiction (Laurel
+                    Centre)
+                  </li>
+                  <li>
+                    Understanding and working with Eating Disorders in Children
+                    and Young People (Brent Centre for Young People)
+                  </li>
+                  <li>
+                    Intercultural Psychotherapy - Equality, diversity and
+                    inclusion training (Nasfiyat)
+                  </li>
+                  <li>
+                    Complex Trauma and Trauma Informed Care (Change Grow Live)
+                  </li>
+                  <li>
+                    Working with autistic Young People (Brent Centre for Young
+                    People)
+                  </li>
+                  <li>Women, Young people and Problem gambling (Gamcare)</li>
+                </ul>
+              </FadeInSection>
+            </div>
+          </div>
         </div>
       </section>
 

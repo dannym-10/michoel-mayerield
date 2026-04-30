@@ -3,14 +3,14 @@
 .home {
   &__hero {
     background-color: $color-primary-dark;
-    padding: $space-3xl $mobile-padding;
+    padding: $space-2xl $mobile-padding;
 
     @include tablet {
-      padding: $space-4xl $tablet-padding;
+      padding: $space-3xl $tablet-padding;
     }
 
     @include desktop {
-      padding: 120px $desktop-padding;
+      padding: 60px $desktop-padding;
     }
   }
 
