@@ -68,15 +68,20 @@ export const WhereWeCanMeet: React.FC = () => {
                     {item.description}
                   </p>
                   <button
-                    className="btn btn--outline"
+                    className="where-we-can-meet__card-img-btn"
                     onClick={() =>
                       setActiveImage({
                         src: IMAGE_MAP[item.imageKey],
                         title: item.title,
                       })
                     }
+                    aria-label={`View photo of ${item.title}`}
                   >
-                    View location
+                    <img
+                      src={IMAGE_MAP[item.imageKey]}
+                      alt={item.title}
+                      className="where-we-can-meet__card-img"
+                    />
                   </button>
                 </div>
               </FadeInSection>

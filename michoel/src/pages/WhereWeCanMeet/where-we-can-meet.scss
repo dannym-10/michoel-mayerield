@@ -83,10 +83,29 @@
     margin-bottom: $space-lg;
   }
 
-  .btn {
+  &__card-img-btn {
     margin-top: auto;
-    font-size: 0.8rem;
-    padding: 8px 20px;
+    width: 100%;
+    padding: 0;
+    border: none;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      opacity: 0.85;
+      transform: scale(1.01);
+    }
+  }
+
+  &__card-img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
   }
 
 &__modal-backdrop {
