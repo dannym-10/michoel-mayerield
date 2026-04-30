@@ -6,8 +6,8 @@ export const navigationData: Navigation[] = [
     link: "/",
   },
   {
-    name: "About Me",
-    link: "about-me",
+    name: "Your Therapist",
+    link: "your-therapist",
   },
   {
     name: "Where We Can Meet",

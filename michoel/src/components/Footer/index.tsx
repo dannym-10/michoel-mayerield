@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
               Counsellor & Addiction Psychotherapist
             </p>
             <p className="footer__location">
-              London Maida Vale, Borehamwood and Online
+              London (Maida Vale), Borehamwood and Online
             </p>
           </div>
 
@@ -37,8 +37,8 @@ export const Footer: React.FC = () => {
             <Link to="/" className="footer__link">
               Home
             </Link>
-            <Link to="/about-me" className="footer__link">
-              About Me
+            <Link to="/your-therapist" className="footer__link">
+              Your Therapist
             </Link>
             <Link to="/where-we-can-meet" className="footer__link">
               Where We Can Meet

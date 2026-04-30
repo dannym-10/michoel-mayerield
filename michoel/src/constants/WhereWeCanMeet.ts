@@ -7,23 +7,23 @@ export interface WhereWeCanMeetItem {
 
 export const whereWeCanMeetData: WhereWeCanMeetItem[] = [
   {
-    title: "London Maida Vale",
+    title: "London (Maida Vale)",
     description:
-      "Support for generalised anxiety, social anxiety, health anxiety, panic attacks, exam stress, and work-related stress.",
+      "Located on Shirland Road (W9), my clinic room in Byron House is modern and clean with soundproof doors to minimise outside noise and maximise privacy. We do not have designated parking, but it is close to train stations and bus stops. All abilities are welcome, with a working lift for accessibility.",
     icon: "bigben",
     imageKey: "maida-vale",
   },
   {
     title: "Borehamwood",
     description:
-      "A safe space to explore depression, low self-esteem, loneliness, and feelings of hopelessness, with compassionate, evidence-based support.",
+      "Located opposite the train station on Station Road (WD6), the room is calm and quiet with gentle dim lighting. There are fidget toys, age-appropriate games, and parking is available. There is no waiting room, and the room is upstairs, so I am mindful of the limited accessibility.",
     icon: "train",
     imageKey: "borehamwood",
   },
   {
     title: "Online",
     description:
-      "Specialist help for drug addiction, alcoholism, smoking, and substance dependency, addressing root causes and building healthier coping strategies.",
+      "Join on Zoom from wherever you live, including internationally (insurance permitting, when clinically appropriate). Many young adults prefer the flexibility of online sessions. If therapy is going well with me and you move, you can continue online rather than start over with someone new. A private space is needed, and I'll encourage you to turn off self-view so sessions feels as natural as possible.",
     icon: "laptop",
     imageKey: "online",
   },

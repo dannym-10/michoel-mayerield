@@ -3,7 +3,7 @@ import { AccordionData } from "../types/Navigation";
 export const homeAccordionData: AccordionData[] = [
   {
     title: "What is the session fee?",
-    description: "The cost per session is £75.",
+    description: "The cost per session is £80.",
   },
   {
     title: "Do you work with children and what age is a young adult?",
@@ -23,11 +23,6 @@ export const homeAccordionData: AccordionData[] = [
     title: "What kind of updates can I expect as a parent?",
     description:
       "Young people often ask me, “Will you tell my parents what I say?” and this depends on their age and circumstances. When appropriate and in the best interests of the young person, I offer parents a check-in review call every 6 to 8 weeks. Parent support is essential for the young person to flourish in Therapy.",
-  },
-  {
-    title: "Do you offer family support?",
-    description:
-      "After a couple of months of individual sessions, where helpful, we can introduce a family session, which would happen alongside the individual work.",
   },
   {
     title: "How many therapy sessions will I have?",
