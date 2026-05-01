@@ -24,15 +24,10 @@ export class InfraStack extends cdk.Stack {
       domainName,
     });
 
-    const certificate = new certificatemanager.DnsValidatedCertificate(
+    const certificate = certificatemanager.Certificate.fromCertificateArn(
       this,
       "SiteCertificate",
-      {
-        domainName,
-        subjectAlternativeNames: [wwwDomain],
-        hostedZone,
-        region: "us-east-1",
-      },
+      "arn:aws:acm:us-east-1:812128475553:certificate/b81d6bd4-02e9-40fe-96aa-fe89aaaa3713",
     );
 
     const bucket = new s3.Bucket(this, "MichaelMayerfeldBucket", {
