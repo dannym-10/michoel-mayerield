@@ -1,0 +1,91 @@
+@import "../../styles/index.scss";
+
+.not-found {
+  &__header {
+    background-color: $color-primary-dark;
+    padding: 56px 30px;
+    text-align: center;
+  }
+
+  &__header-inner {
+    max-width: $global-width;
+    margin: 0 auto;
+
+    h1 {
+      color: $color-white;
+      margin-bottom: $space-md;
+    }
+
+    p {
+      color: $color-primary-light;
+      font-size: 1.1rem;
+    }
+  }
+
+  &__content {
+    @include section-padding;
+    text-align: center;
+  }
+
+  &__content-inner {
+    max-width: $global-width;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-xl;
+  }
+
+  &__message {
+    color: $color-text-medium;
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 480px;
+    margin: 0;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+    align-items: center;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  &__btn-primary {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: $color-primary-dark;
+    color: $color-white;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    @include smooth-transition(background-color);
+
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
+
+  &__btn-secondary {
+    display: inline-block;
+    padding: 14px 32px;
+    border: 2px solid $color-primary-dark;
+    color: $color-primary-dark;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    @include smooth-transition(color);
+
+    &:hover {
+      color: $color-primary;
+      border-color: $color-primary;
+    }
+  }
+}
