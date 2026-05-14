@@ -21,9 +21,6 @@ export const Footer: React.FC = () => {
 
           <div className="footer__col">
             <h4 className="footer__col-title">Contact</h4>
-            <a href="tel:07851958142" className="footer__link">
-              07851 958 142
-            </a>
             <a
               href="mailto:Michaelmayerfeld@gmail.com"
               className="footer__link"
@@ -45,6 +42,9 @@ export const Footer: React.FC = () => {
             </Link>
             <Link to="/next-steps" className="footer__link">
               Next Steps
+            </Link>
+            <Link to="/privacy-policy" className="footer__link">
+              Privacy Policy
             </Link>
           </div>
 
@@ -78,8 +78,14 @@ export const Footer: React.FC = () => {
 
       <div className="footer__copyright">
         <p>
-          &copy; {new Date().getFullYear()} Michael Mayerfeld. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} Michael Mayerfeld • Website by&nbsp;<a
+            href="https://dannymoss.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__link"
+          >
+            DannyMoss.com
+          </a>
         </p>
       </div>
     </footer>

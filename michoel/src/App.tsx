@@ -4,6 +4,7 @@ import { WhereWeCanMeet } from "./pages/WhereWeCanMeet";
 import { NextSteps } from "./pages/NextSteps";
 import { Home } from "./pages/Home/Home";
 import { NotFound } from "./pages/NotFound/NotFound";
+import { PrivacyPolicy } from "./pages/PrivacyPolicy";
 import { navigationData } from "./constants/Navigation";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
@@ -22,6 +23,7 @@ export const App = () => {
             <Route path={navigationData[1].link} element={<AboutMe />} />
             <Route path={navigationData[2].link} element={<WhereWeCanMeet />} />
             <Route path={navigationData[3].link} element={<NextSteps />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path={navigationData[4].link} element={<NotFound />} />
           </Routes>
         </main>
