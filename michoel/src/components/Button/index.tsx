@@ -7,6 +7,7 @@ interface ButtonProps {
   variant?: "primary" | "secondary" | "outline";
   type?: "button" | "submit";
   fullWidth?: boolean;
+  disabled?: boolean;
   to?: string;
   href?: string;
   onPress?: () => void;
@@ -17,6 +18,7 @@ export const Button: React.FC<ButtonProps> = ({
   variant = "primary",
   type = "button",
   fullWidth = false,
+  disabled = false,
   to,
   href,
   onPress,
@@ -40,7 +42,12 @@ export const Button: React.FC<ButtonProps> = ({
   }
 
   return (
-    <button type={type} onClick={onPress} className={className}>
+    <button
+      type={type}
+      onClick={onPress}
+      disabled={disabled}
+      className={className}
+    >
       {text}
     </button>
   );

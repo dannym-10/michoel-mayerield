@@ -3,7 +3,7 @@ import { AccordionData } from "../types/Navigation";
 export const homeAccordionData: AccordionData[] = [
   {
     title: "What is the session fee?",
-    description: "The cost per session is £80.",
+    description: "The cost per session is £90.",
   },
   {
     title: "Do you work with children and what age is a young adult?",

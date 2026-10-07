@@ -53,4 +53,10 @@
     outline: 2px solid $color-secondary;
     outline-offset: 2px;
   }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 }

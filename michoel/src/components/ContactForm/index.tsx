@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import "./contact-form.scss";
 import { Button } from "../Button";
+import { useSendEmail } from "../../hooks/useSendEmail";
+import { useTurnstile } from "../../hooks/useTurnstile";
 
 interface FormData {
   name: string;
@@ -12,13 +14,35 @@ interface FormData {
 
 export const ContactForm: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [turnstileError, setTurnstileError] = useState<string | null>(null);
   const form = useForm<FormData>();
   const { formState, register, handleSubmit } = form;
   const { errors } = formState;
+  const { send, loading, error: submitError } = useSendEmail();
+  const {
+    containerRef: turnstileRef,
+    token: turnstileToken,
+    loadError: turnstileLoadError,
+    reset: resetTurnstile,
+  } = useTurnstile();
 
-  const onSubmit = (data: FormData) => {
-    console.log("submitting", data);
-    setSubmitted(true);
+  useEffect(() => {
+    if (turnstileToken) setTurnstileError(null);
+  }, [turnstileToken]);
+
+  const onSubmit = async (data: FormData) => {
+    if (!turnstileToken) {
+      setTurnstileError("Please complete the verification check.");
+      return;
+    }
+    setTurnstileError(null);
+
+    const ok = await send({ ...data, cfTurnstileToken: turnstileToken });
+    if (ok) {
+      setSubmitted(true);
+    } else {
+      resetTurnstile();
+    }
   };
 
   if (submitted) {
@@ -113,8 +137,31 @@ export const ContactForm: React.FC = () => {
           />
         </div>
 
+        <div className="contact-form__field">
+          {turnstileLoadError ? (
+            <span className="contact-form__error">
+              Verification failed to load. Please refresh the page or email
+              me directly.
+            </span>
+          ) : (
+            <div ref={turnstileRef} />
+          )}
+          {turnstileError && (
+            <span className="contact-form__error">{turnstileError}</span>
+          )}
+        </div>
+
+        {submitError && (
+          <span className="contact-form__error">{submitError}</span>
+        )}
+
         <div className="contact-form__submit">
-          <Button text="Send Message" type="submit" variant="secondary" />
+          <Button
+            text={loading ? "Sending…" : "Send Message"}
+            type="submit"
+            variant="secondary"
+            disabled={loading || turnstileLoadError}
+          />
         </div>
       </form>
     </div>
